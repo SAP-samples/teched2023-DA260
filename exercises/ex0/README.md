@@ -1,26 +1,23 @@
-# Level 1 Heading
+# Exercise 0 - Get Access to Guided Experience System
 
-In this exercise, you will...
+The TechEd 2023 Hands-On sessions assume that you are using a Guided Experience system. Access to such a system is provided to you free of charge and within less than two minutes. Even if you happen to have access to your own SAP Data Warehouse Cloud system, you should request access to a Guided Experience system since some preconditions (like e.g. access to a HANA Cloud system containing the necessary data) are only configured there.
 
-## Level 2 Heading
+**Note:** We are planning to allow usage of your own SAP Data Warehouse Cloud system within this exercise at a later point in time. 
 
-After completing these steps you will have....
+1. Visit the [SAP Data Warehouse Cloud website](https://www.sap.com/products/technology-platform/data-warehouse-cloud.html) for a free trial account.
 
-1.	Click here.
-<br>![](/exercises/ex0/images/00_00_0010.png)
+![Web site](/exercises/ex0/images/0.png)
 
-2.	Insert this code.
-``` abap
- DATA(params) = request->get_form_fields(  ).
- READ TABLE params REFERENCE INTO DATA(param) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-```
+2. Choose "Experience SAP Data Warehouse Cloud" and fill out the form. Click submit to get your trial account login data.
+
+![Web site](/exercises/ex0/images/1.png)
+
+3. Save your account login data and login to your trial account.
+
+4. You will be receiving an email with the access link and your user credentials shortly after.
 
 ## Summary
 
-Now that you have ... 
-Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+Now you have created your SAP DWC Trial account. The DWC trial account gives you access to an empty space in which you can perform the subsequent exercise steps
+
+Continue to - [Exercise 1 - Load data from SAP HANA Cloud](../ex1/README.md)
