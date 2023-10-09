@@ -1,18 +1,27 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2023-DA260)](https://api.reuse.software/info/github.com/SAP-samples/teched2023-DA260)
 
-# Session ID - Session Title
+# DA260 - New Approaches to Loading, Staging, and Integrating Data in SAP Datasphere
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2022 session called Session ID - Session Title.  
+This hands-on workshop will give you the opportunity to use the new replicatipon and transformation features of SAP Data Warehouse Cloud. Find out how the SAP Data Warehouse Cloud solution helps the line-of-business user to get the job done. Discover flexible connection features. Learn how you can access data from sources. Try out the new transformation flow feature, to stage data. 
 
 ## Overview
 
-This session introduces attendees to...
+MyCompany sales bikes to customers. In the source the list price is stored in the product master data. The sales order items only contain the net sales and quantity. The list price, that was valid at the time of sales, is not stored. The goal of the exercise is, to create a data model that stores the historic list price. For that a two stage data model is used. The data will come in by a Replication Flow and be taged by a Transformation Flow. 
+
+Question to answer: Was there a rebate in the net sales compared to the list price of the product master data?
+
+* Learning Goal: Learn how to load data in delta with a replication flow and stage them with transformation flow.* 
+* Time: 2-4 h
+* Finished Product: A view that shows the potential rebate per sales order line item. 
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are...
+* Google Chrome
+* Access to this GitHub repository
+* Access to a Guided Experience system of SAP Data Warehouse Cloud tenant (if you don't have one yet, please follow the instructions of exercise 0)
+
 
 ## Exercises
 
