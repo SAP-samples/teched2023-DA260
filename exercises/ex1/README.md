@@ -16,5 +16,5 @@ The relevant tables for our scenario are
 - TEXTS (SNWD_TEXTS).
 
 Here is how these tables relate to each other:
-
+![Image of EPM Relation Diagram between ABAP Tables](images/EPM_Relation_Table.jpg)
 
