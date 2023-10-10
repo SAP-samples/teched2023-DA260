@@ -4,7 +4,9 @@
 
 ## Description
 
-This hands-on workshop will give you the opportunity to use the new replicatipon and transformation features of SAP Data Warehouse Cloud. Find out how the SAP Data Warehouse Cloud solution helps the line-of-business user to get the job done. Discover flexible connection features. Learn how you can access data from sources. Try out the new transformation flow feature, to stage data. 
+This hands-on workshop will give you the opportunity to use the new replication and transformation features of SAP Datasphere. Find out how the SAP Datasphere solution helps the line-of-business user to get the job done. Discover flexible connection features. Learn how you can access data from sources. Try out the new transformation flow feature, to stage data. 
+
+SAP Datasphere, the evoluation of SAP Data Warehouse Cloud and SAP Data Intelligence, is a comprehensive data service acting as a business data fabric that enables every data professional to deliver seamless and scalable access to mission-critical business data. SAP Datasphere enables access to authoritative data by accelerating time-to-value by automatically reusing the semantical definitions and associations from SAP applications. SAP Datasphere enriches all data projects by harmonizing heterogeneous data into a business semantic model of your diverse data landscape. On top it helps to simplify the data landscape and accesses all your data across hybrid and cloud environments no matter where it resides.
 
 ## Overview
 
@@ -21,6 +23,8 @@ Question to answer: Was there a rebate in the net sales compared to the list pri
 * Google Chrome
 * Access to this GitHub repository
 * Access to a Guided Experience system of SAP Data Warehouse Cloud tenant (if you don't have one yet, please follow the instructions of exercise 0)
+* Basic knowhow about the usage and integration of data from SAP S/4HANA
+* General understanding of Enterprise Data Management and ETL (Extraction, Transformation, Load)
 
 
 ## Exercises
