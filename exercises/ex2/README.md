@@ -4,7 +4,7 @@
 
 Replication flows are provisioned via the so called "Replication Management Service (RMS)" and have been made available to simplify the realization of data replication use cases in SAP Datasphere. Whereas RMS includes the whole data replication service incl. its dependent components, a "Replication Flow" is the name of the artefact that a user creates & maintaines inside the SAP Datasphere Data Builder application. The main capabilities and functional foundation are visualized in the following illustration:
 <br><br>
-![](images/3-002.JPG)
+![](images/overview.JPG)
 <br>
 
 The main functionalities of Replication Flows cover:
