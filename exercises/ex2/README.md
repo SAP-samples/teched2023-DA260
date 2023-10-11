@@ -53,48 +53,48 @@ There are partially special configurations available for specific target connect
 ### **Create a Replication Flow in SAP Datasphere** 
 This sub-chapter will provide an overview for how to create a Replication Flow including an explanation for all relevant settings a user needs to define in the different steps.
 
-You can also get additional information for a step by step in the exercise chapter of this hands-on session: **[Replication Flow Exercises](../ex3/README.md)**
 <br>
 
 #### **Configuration settings in the Properties tab**
 <br>
-First of all we will start inside the Modeler application in SAP Data Intelligence Cloud, where you can create a Replication Flow and provide a name:
+First of all we open the Data Builder application in SAP Datasphere:
 
-![](images/DI_RF_Name.png)
-
-<br>
-
-![](images/RF_Overview.png)
+![](images/DataBuilder.JPG)
 
 <br>
 
-- *Description*
+In the Data Builder, you can open the "Flows" tab where you can finally create a Replication Flow:
 
-  Provide an optional description for your Replication Flow, otherwise you can leave it empty.
-
-<br>
+![](images/Create_Replication_Flow.JPG)
 
 - *Source Connection*
 
-  Define your source connection from the connection management. Be aware that the list is filtered by connection types that are supported by Replication Flows as a source system. 
+<br>
+
+First of all, please select a source connection using the SAP Datasphere user guidance "Select Source Connection" button:
+
+![](images/Select_Source.JPG)
 
 <br>
 
-- *Source Container*
+In a second step, please click on "Select Source Container":
 
-  Define the source container. In case of a database it is the database schema, but in case of ABAP it is the logical object you want to replicate (CDS (= CDS Views), SLT(tables), or ODP_SAPI / ODP_BW for ODP objects).
+![](images/Select_Container.JPG)
+
+<br>
+
+In the pop-up dialog, please select the folder "CDS":
+
+![](images/Select_CDS.JPG)
 
 <br>
 
 - *Target Connection*
 
-  Define your target connection from the connection management. Be aware that the list is filtered by connection types that are supported by Replication Flows as a target system.
+  Define your target connection as part of the data replciation scenario. In this case we replicate the data from SAP S/4HANA to SAP Datapshere local tables as target system:
+  
 
 <br>
-
-- *Target Container*
-
-  Define the target container. In case of a database, it is the database schema and in case of an object store it is target root folder in which you want to replicate the data. In case of Kafka as a target, no target container is needed as we directly replicate into topics of a Kafka broker without the need of a target container.
 
 <br>
 
