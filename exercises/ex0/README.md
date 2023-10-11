@@ -22,6 +22,6 @@ The TechEd 2023 Hands-On sessions assume that you are using a Guided Experience 
 
 ## Summary
 
-Now you have created your SAP DWC Trial account. The DWC trial account gives you access to an empty space in which you can perform the subsequent exercise steps
+Now you have created your SAP Datasphere Trial account. The SAP Datasphere trial account gives you access to an empty space in which you can perform the subsequent exercise steps
 
 Continue to - [Exercise 1 - Load data from SAP HANA Cloud](../ex1/README.md)
