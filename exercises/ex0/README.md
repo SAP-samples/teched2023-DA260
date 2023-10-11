@@ -6,7 +6,11 @@ The TechEd 2023 Hands-On sessions assume that you are using a Guided Experience 
 
 1. Visit the [SAP Datasphere website](https://www.sap.com/products/technology-platform/datasphere.html) for a free trial account.
 
-![Web site](/exercises/ex0/images/0.png)
+![Web site](/exercises/ex0/images/Datasphere_Trial.jpg)
+
+2. Choos "Start Now":
+
+![Web site](/exercises/ex0/images/Datasphere_Trial2.jpg)
 
 2. Choose "Experience SAP Datasphere" and fill out the form. Click submit to get your trial account login data.
 
