@@ -46,10 +46,6 @@ There are partially special configurations available for specific target connect
 
 <br>
 
-![](images/3-003.JPG)
-
-<br>
-
 ### **Create a Replication Flow in SAP Datasphere** 
 This sub-chapter will provide an overview for how to create a Replication Flow including an explanation for all relevant settings a user needs to define in the different steps.
 
@@ -59,13 +55,13 @@ This sub-chapter will provide an overview for how to create a Replication Flow i
 <br>
 First of all we open the Data Builder application in SAP Datasphere:
 
-![](images/DataBuilder.JPG)
+![](images/DataBuilder.jpg)
 
 <br>
 
 In the Data Builder, you can open the "Flows" tab where you can finally create a Replication Flow:
 
-![](images/Create_Replication_Flow.JPG)
+![](images/Create_Replication_Flow.jpg)
 
 - *Source Connection*
 
@@ -73,19 +69,24 @@ In the Data Builder, you can open the "Flows" tab where you can finally create a
 
 First of all, please select a source connection using the SAP Datasphere user guidance "Select Source Connection" button:
 
-![](images/Select_Source.JPG)
+![](images/Select_Source.jpg)
+
+Then in the pop-up dialog, please select the connection to SAP S/4HANA by selecting "S4_HANA":
+
+![](images/Select_S4HANA_Source.jpg)
+
 
 <br>
 
 In a second step, please click on "Select Source Container":
 
-![](images/Select_Container.JPG)
+![](images/Select_Container.jpg)
 
 <br>
 
 In the pop-up dialog, please select the folder "CDS":
 
-![](images/Select_CDS.JPG)
+![](images/Select_CDS.jpg)
 
 <br>
 
