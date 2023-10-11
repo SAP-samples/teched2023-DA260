@@ -1,10 +1,10 @@
 # Exercise 0 - Get Access to Guided Experience System
 
-The TechEd 2023 Hands-On sessions assume that you are using a Guided Experience system. Access to such a system is provided to you free of charge and within less than two minutes. Even if you happen to have access to your own SAP Data Warehouse Cloud system, you should request access to a Guided Experience system since some preconditions (like e.g. access to a HANA Cloud system containing the necessary data) are only configured there.
+The TechEd 2023 Hands-On sessions assume that you are using a Guided Experience system. Access to such a system is provided to you free of charge and within less than two minutes. Even if you happen to have access to your own SAP Datasphere system, you should request access to a Guided Experience system since some preconditions (like e.g. access to a HANA Cloud system containing the necessary data) are only configured there.
 
 **Note:** We are planning to allow usage of your own SAP Datasphere system within this exercise at a later point in time. 
 
-1. Visit the [SAP Datasphere website](https://www.sap.com/products/technology-platform/data-warehouse-cloud.html) for a free trial account.
+1. Visit the [SAP Datasphere website](https://www.sap.com/products/technology-platform/datasphere.html) for a free trial account.
 
 ![Web site](/exercises/ex0/images/0.png)
 
