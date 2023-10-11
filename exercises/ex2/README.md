@@ -69,11 +69,11 @@ In the Data Builder, you can open the "Flows" tab where you can finally create a
 
 First of all, please select a source connection using the SAP Datasphere user guidance "Select Source Connection" button:
 
-![](images/Select_Source.jpg)
+![](images/Source_Connection.jpg)
 
 Then in the pop-up dialog, please select the connection to SAP S/4HANA by selecting "S4_HANA":
 
-![](images/Select_S4HANA_Source.jpg)
+![](images/S4HANA_Source.jpg)
 
 
 <br>
