@@ -114,21 +114,26 @@ In the highlighted section it shows the new target local tables that will be cre
 
    	![ex_01_19](images/ex_01_19.png)
 
+
 21.	Wait until all the four replication objects are run successfully, which means the initial load is done and they are in the delta load stage to receive updates from the source SAP S/4HANA system.
 Once the Initial is done the status of each replication object will switch to status *Retrying*, which means that it is in delt load stage and will heck every 1h for any new change data to arrive coming from the four source CDS views. 
 
-      Note: You can also check in the “Metrics” tab for additional statistics such as the initial load duration as well as the number of transferred records:
+      Note: You can also check in the *Metrics* tab for additional statistics such as the initial load duration as well as the number of transferred records:
 
-      In case of any error message, please check “message” tab to access details of the error message.
+      ![ex_01_21](images/ex_01_21.png)
+      
+      In case of any error message, please check *Message* tab to access details of the error message.
+
 
 22.	Finally, you can check the replicated data from SAP S/4HANA CDS views in the Datasphere local tables. Therefore, go to the main page of the Data Builder and check for the tables you have defined in the Replication Flow before:
-      ![ex_01_21_0](images/ex_01_21_0.png)
+    
+      ![ex_01_22_0](images/ex_01_22_0.png)
 
     Then select one of the locla tables in SAP datasphere, e.g. SalesOrder, by double clicking on the table.
 
     Click on the previwe button as highlighted below:
 
-    ![ex_01_21_1](images/ex_01_21_1.png)
+    ![ex_01_22_1](images/ex_01_22_1.png)
 
     You can now see the data that was replicaed from SAP S/4HANA CDS View containing Sales order information on the bottom of your screen.
 
