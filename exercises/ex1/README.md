@@ -116,7 +116,7 @@ In the highlighted section it shows the new target local tables that will be cre
 
 
 21.	Wait until all the four replication objects are run successfully, which means the initial load is done and they are in the delta load stage to receive updates from the source SAP S/4HANA system.
-Once the Initial is done the status of each replication object will switch to status *Retrying*, which means that it is in delt load stage and will heck every 1h for any new change data to arrive coming from the four source CDS views. 
+Once the Initial is done the status of each replication object will switch to status *Retrying*, which means that it is in delta load stage and will check every 1h for any new change data to arrive coming from the four source CDS views. 
 
       Note: You can also check in the *Metrics* tab for additional statistics such as the initial load duration as well as the number of transferred records:
 
