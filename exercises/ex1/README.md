@@ -11,7 +11,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
    
     ![ex_01_01](images/ex_01_01.png)
 
-2.	Click on Data Builder to see the Data Builder homepage as shown below and scroll the horizontal scroll bar to the middle until you see “New Replication Flow” tile.
+2.	Click on Data Builder to see the Data Builder homepage as shown below and scroll the horizontal scroll bar to the middle until you see *New Replication Flow* tile.
    
     ![ex_01_02](images/ex_01_02.png)
 
@@ -35,10 +35,10 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_01_07](images/ex_01_07.png)
 
-8.	Now click on *Add Source Objects* button that launches “Select Source Objects” popup as shown below. Scroll down in the tree hierarchy on the left and select “TMP – Local Objects”. In a next step, please enter “Z_CDS” in search bar and click enter to filter for the required CDS views that are require for this exercise. Now, please select the following CDS Views as shown below:
+8.	Now click on *Add Source Objects* button that launches *Select Source Objects* popup as shown below. Scroll down in the tree hierarchy on the left and select *TMP – Local Objects*. In a next step, please enter “Z_CDS” in search bar and click enter to filter for the required CDS views that are require for this exercise. Now, please select the following CDS Views as shown below:
 •	Z_CDS_EPM_BUPA
 •	Z_CDS_EPM_PD
-•	Z_CDS_EPM_SALESORDER
+•	Z_CDS_EPM_SO
 •	Z_CDS_EPM_SO_I
 
     ![ex_01_08](images/ex_01_08.png)
