@@ -62,7 +62,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
       As a next step, click on icon adjacent to *Select Target Connection*. 
 
-    ![ex_01_11](images/ex_01_11_2.png)
+    ![ex_01_11_2](images/ex_01_11_2.png)
 
       The following popup will appear where you need to select the target connection. In this case please select *SAP Datasphere* as target connection.
 
@@ -86,9 +86,9 @@ In the highlighted section it shows the new target local tables that will be cre
 
    Note: The replication flows can also write into already existing target tables in SAP Datasphere that have been created before. For this you can click on the three buttons next to the target table name and select *Map to Existing Target Object*. You can identify such tables that do not yet exist in your target system by looking at the name of the target data set, which are displayed slightly transparent and written in italic like it is currently displayed in your replication flow. 
 
-16.	Click on Deploy icon ![ex_01_16](images/ex_01_16_1.png) in the general tab on top that launches Save popup window.
+16.	Click on Deploy icon ![ex_01_16_1](images/ex_01_16_1.png) in the general tab on top that launches Save popup window.
 
-   ![ex_01_16](images/ex_01_16_0.png)
+   ![ex_01_16_0](images/ex_01_16_0.png)
 
    Change the defaule name being displayed by defining the business name as *Inbound Repflow* which will automatically set technical name as *Inbound_RepFlow*. At the moment, replication flows will always have the same name for business as well as technical name, which cannot be changed.
     
@@ -100,15 +100,15 @@ In the highlighted section it shows the new target local tables that will be cre
 
     Note: A message popup on the bottom of the screen will appear once the deployment process is finished and you can also check it using the notifications icon in the upper-right corner of your browser.
 
-    ![ex_01_17](images/ex_01_17_1.png)
+    ![ex_01_17_1](images/ex_01_17_1.png)
 
 19.	Once the status is Deployed, click on run icon in the General tab above. You will see the Run Status in property panel getting updated to “Running”.
 
     ![ex_01_18](images/ex_01_18.png)
 
-20.	Click on Monitor icon ![ex_01_16](images/ex_01_19_1.png)  in Run Status tab in property panel, which will directly navigate you to the detailed monitoring screen of your replication flow:
+20.	Click on Monitor icon ![ex_01_19_1](images/ex_01_19_1.png)  in Run Status tab in property panel, which will directly navigate you to the detailed monitoring screen of your replication flow:
 
-      ![ex_01_19](images/ex_01_19_0.png)
+      ![ex_01_19_0](images/ex_01_19_0.png)
 
       Here you can see different information such as the source and target connection, load statistics and the status of the data replication for all four CDS Views
 
@@ -122,13 +122,13 @@ Once the Initial is done the status of each replication object will switch to st
       In case of any error message, please check “message” tab to access details of the error message.
 
 22.	Finally, you can check the replicated data from SAP S/4HANA CDS views in the Datasphere local tables. Therefore, go to the main page of the Data Builder and check for the tables you have defined in the Replication Flow before:
-      ![ex_01_19](images/ex_21_0.png)
+      ![ex_01_21_0](images/ex_21_0.png)
 
     Then select one of the locla tables in SAP datasphere, e.g. SalesOrder, by double clicking on the table.
 
     Click on the previwe button as highlighted below:
 
-    ![ex_01_19](images/ex_21_1.png)
+    ![ex_01_21_1](images/ex_21_1.png)
 
     You can now see the data that was replicaed from SAP S/4HANA CDS View containing Sales order information.
 
