@@ -23,7 +23,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_01_04](images/ex_01_04.png)
 
-5.	Select S4_HANA which is of ABAP type from the list of connections. It will update the connection and *Select Source Container* button is auto selected for next step.
+5.	Select *S4_HANA* which is of ABAP type from the list of connections. It will update the connection and *Select Source Container* button is auto selected for next step on the bottom of the screen highlighted in blue.
 
     ![ex_01_05](images/ex_01_05.png)
 
