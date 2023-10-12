@@ -62,7 +62,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
       As a next step, click on icon adjacent to *Select Target Connection*. 
 
-    ![ex_01_11_2](images/ex_01_11_2.png)
+    ![ex_01_11_2](images/ex_1_11_2.png)
 
       The following popup will appear where you need to select the target connection. In this case please select *SAP Datasphere* as target connection.
 
