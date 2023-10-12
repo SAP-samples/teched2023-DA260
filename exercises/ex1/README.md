@@ -37,13 +37,15 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
 8.	Now click on *Add Source Objects* button that launches *Select Source Objects* popup as shown below. Scroll down in the tree hierarchy on the left and select *TMP – Local Objects*. In a next step, please enter “Z_CDS” in search bar and click enter to filter for the required CDS views that are require for this exercise. Now, please select the following CDS Views as shown below:
    <br>
-   - Z_CDS_EPM_BUPA 
-   - Z_CDS_EPM_PD 
-   - Z_CDS_EPM_SO 
-   - Z_CDS_EPM_SO_I 
+   - Z_CDS_EPM_BUPA <br>
+   - Z_CDS_EPM_PD  <br>
+   - Z_CDS_EPM_SO  <br>
+   - Z_CDS_EPM_SO_I  <br>
 
-    ![ex_01_08](images/ex_01_08.png)
+   <br>
 
+![ex_01_07](images/ex_01_08.png)
+    
 9.	Click on *Next* button to see updated popup
 
     ![ex_01_09](images/ex_01_09.png)
