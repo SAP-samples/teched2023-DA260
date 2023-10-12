@@ -1,27 +1,19 @@
-# Exercise 0 - Get Access to Guided Experience System
+# Exercise 1 - Introduction to the Enterprise Procurement Model (EPM) in SAP S/4HANA
+In this workshop we will be using the Enterprise Procurement Model (EPM) as a data basis for our Deep Dive and Exercise scenarios. It is provided in all ABAP systems, hence also in SAP S/4HANA, as a ready-to-go demo application.
 
-The TechEd 2023 Hands-On sessions assume that you are using a Guided Experience system. Access to such a system is provided to you free of charge and within less than two minutes. Even if you happen to have access to your own SAP Datasphere system, you should request access to a Guided Experience system since some preconditions (like e.g. access to a HANA Cloud system containing the necessary data) are only configured there.
+The business scenario at the core of EPM is that of a web shop run by a retail company called ITelO, a fictitious company that buys and sells computers & accessories. ITelO is a global player with several subsidiaries and locations world-wide selling its products through direct distribution channels. The company has various reseller and standard customers as well as various suppliers. Customers can purchase goods either directly from ITelO or indirectly from a supplier if the goods are not on stock. The main entities supporting the business scenario in EPM are implemented as Business Objects (BO). An example of an EPM BO is the Product BO, which encapsulates the business logic for maintaining and browsing products. The business objects available in EPM support the sales and procurement processes.
 
-**Note:** We are planning to allow usage of your own SAP Datasphere system within this exercise at a later point in time. 
+In order to support a realistic scenario, there are means to generate mass data which allow the simulation of generating real business object sample data in the area of transactional data (e.g. sales order and purchas orders) and master data (e.g. products). The generated data is approved and can be used at customers’ sites. EPM data can be generated in SAP S/4HANA via transaction SEPM_DG.
 
-1. Visit the [SAP Datasphere website](https://www.sap.com/products/technology-platform/datasphere.html) for a free trial account.
+Even though EPM also provides several BO specific CDS Views, which are all linked to each other via associations, we'll be using the underlying physical tables in our Deep Dive demos and the Exercises. They are starting with the prefix SNWD_.
 
-![Web site](/exercises/ex0/images/Datasphere_Trial.jpg)
+The relevant tables for our scenario are
 
-2. Choos "Start Now":
+- BUSINESS PARTNER (SNWD_BPA),
+- SALES ORDER HEADER (SNWD_SO),
+- SALES ORDER ITEM (SNWD_SO_I),
+- PRODUCT (SNWD_PD),
+- TEXTS (SNWD_TEXTS).
 
-![Web site](/exercises/ex0/images/Datasphere_Trial2.jpg)
-
-2. Choose "Experience SAP Datasphere" and fill out the form. Click submit to get your trial account login data.
-
-![Web site](/exercises/ex0/images/1.png)
-
-3. Save your account login data and login to your trial account.
-
-4. You will be receiving an email with the access link and your user credentials shortly after.
-
-## Summary
-
-Now you have created your SAP Datasphere Trial account. The SAP Datasphere trial account gives you access to an empty space in which you can perform the subsequent exercise steps
-
-Continue to - [Exercise 1 - Load data from SAP HANA Cloud](../ex1/README.md)
+Here is how these tables relate to each other:
+![Image of EPM Relation Diagram between ABAP Tables](images/EPM_Relation_Table.jpg)
