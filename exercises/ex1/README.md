@@ -102,7 +102,7 @@ In the highlighted section it shows the new target local tables that will be cre
 
     ![ex_01_17_1](images/ex_01_17_1.png)
 
-19.	Once the status is Deployed, click on run icon in the General tab above. You will see the Run Status in property panel getting updated to “Running”.
+19.	Once the status is Deployed, click on run icon ![ex_01_18_0](images/ex_01_18_0.png) in the General tab above. You will see the Run Status in property panel getting updated to “Running”.
 
     ![ex_01_18](images/ex_01_18.png)
 
