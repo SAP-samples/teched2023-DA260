@@ -56,7 +56,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_01_09](images/ex_01_09.png)
 
-10.	Click on Add Selection that shows that starts the fetching of data from source
+10.	Click on Add Selection that shows that starts the fetching of source objects details from source
 
     ![ex_01_10](images/ex_01_10.png)
 
