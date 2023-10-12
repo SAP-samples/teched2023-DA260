@@ -92,7 +92,7 @@ In the highlighted section it shows the new target local tables that will be cre
 
    Change the defaule name being displayed by defining the business name as *Inbound Repflow* which will automatically set technical name as *Inbound_RepFlow*. At the moment, replication flows will always have the same name for business as well as technical name, which cannot be changed.
     
-    ![ex_01_16](images/ex_01_16.png)
+   ![ex_01_16](images/ex_01_16.png)
 
 17.	Click on the *Save* button, which will start the deploy process. Check for the status in Properties Panel. The status is shown as *Not Deployed* initially and will get updated to *Deployed* after few seconds.
 
@@ -122,15 +122,15 @@ Once the Initial is done the status of each replication object will switch to st
       In case of any error message, please check “message” tab to access details of the error message.
 
 22.	Finally, you can check the replicated data from SAP S/4HANA CDS views in the Datasphere local tables. Therefore, go to the main page of the Data Builder and check for the tables you have defined in the Replication Flow before:
-      ![ex_01_21_0](images/ex_21_0.png)
+      ![ex_01_21_0](images/ex_01_21_0.png)
 
     Then select one of the locla tables in SAP datasphere, e.g. SalesOrder, by double clicking on the table.
 
     Click on the previwe button as highlighted below:
 
-    ![ex_01_21_1](images/ex_21_1.png)
+    ![ex_01_21_1](images/ex_01_21_1.png)
 
-    You can now see the data that was replicaed from SAP S/4HANA CDS View containing Sales order information.
+    You can now see the data that was replicaed from SAP S/4HANA CDS View containing Sales order information on the bottom of your screen.
 
 **This concludes the Exercise 1 where the objective is to replicate data from SAP S/4HANA source into SAP Datasphere.**
 
