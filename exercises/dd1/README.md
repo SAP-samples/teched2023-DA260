@@ -271,4 +271,6 @@ For mapping the key fields of all underlying tables to the fields of the CDS vie
 3. Verify the results in the ***Data Preview*** by pressing ***F8***. The ABAP CDS View should still provide the same data as before delta-enabling.<br><br>
 
 We have now enabled our Sales Order object CDS View for Change Data Capture and are able to obtain any delta from one of the involved tables.<br>
-In the next deep dive 2, we test the Initial Load and Delta Load capabilities with a Replication Flow in SAP Datasphere including an introduction to Replication Flows.
+In the next deep dive 2, we test the Initial Load and Delta Load capabilities with a Replication Flow in SAP Datasphere including an introduction to Replication Flows
+
+Continue to [Deep Dive 2 - Introduction to Replication Flows in SAP Datasphere](exercises/dd2/)
