@@ -111,16 +111,23 @@ This exercise will also simulate the arrival of a new sales order and the change
 - ##	Exercise 3.3 – Execute Transformation flow to pull the delta records from source.
 
 1. Go to Data Integration monitor.
-1. ![Ex03_20](images/Ex03_20.png)
-1. Go to Flow monitor.
-1. Go to transformation flow tab.
-1. ![Ex03_21](images/Ex03_21.png)
-1. Run the transformation flow, which is created in exercise 2.
-1. ![Ex03_22](images/Ex03_22.png)
-1. Wait for Notification to the completion of Transformation flow execution.
-1. Go to transformation flow details.
-1. Select the latest task runs and check the metrics section to verify how many delta records are loaded.
-1. ![Ex03_23](images/Ex03_23.png)
+   
+   ![Ex03_20](images/Ex03_20.png)
+   
+2. Go to Flow monitor.
+3. Go to transformation flow tab.
+   
+   ![Ex03_21](images/Ex03_21.png)
+   
+4. Run the transformation flow, which is created in exercise 2.
+   
+   ![Ex03_22](images/Ex03_22.png)
+   
+5. Wait for Notification to the completion of Transformation flow execution.
+6. Go to transformation flow details.
+7. Select the latest task runs and check the metrics section to verify how many delta records are loaded.
+   
+   ![Ex03_23](images/Ex03_23.png)
 
 
 - ##	Exercise 3.4 – Preview the Analytical dataset model to see the historical and latest pulled records from Transformation flow Delta local table.
