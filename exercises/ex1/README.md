@@ -4,6 +4,14 @@ This exercise involves creating a Replication Flow that reads data from SAP S/4 
 
 In this exercise we will make use of connections that are pre-delivered in your SAP Datasphere free tier landscape, e.g. the SAP S/4HANA on Premise source system. You can check the S4HANA connection in the “Connections” application inside your SAP Datasphere space.
 
+The Task is to load the CDS Views for
+- Business Partner -  Z_CDS_EPM_BUPA
+- Product - Z_CDS_EPM_PD
+- Sales Order - Z_CDS_EPM_SO
+- Sales Order Items - Z_CDS_EPM_SO_I
+in delta mode into Datasphere. Delta mode is required to setup the historic price derivation in the transformation flow later. ![image](https://github.com/SAP-samples/teched2023-DA260/assets/20391663/df5858f0-a223-466b-ab41-2cb796128019)
+
+
 Step by Step guide:
 Refer to the provided solution below for a detailed, step-by-step guide to complete Exercise 1
 
