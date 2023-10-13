@@ -12,9 +12,9 @@ This exercise will also simulate the arrival of a new sales order and the change
 - ##	Exercise 3.1 - Create an Analytical Dataset model with transformation flow generated target delta table.
 
 1. Open the Graphical view app from Data builder.
-1. ![Ex03_01](images/Ex03_01.png)
-1. Create Graphical view of semantic type Analytical dataset with delta local table and source table.
-1. ![Ex03_02](images/Ex03_02.png)
+   ![Ex03_01](images/Ex03_01.png)
+2. Create Graphical view of semantic type Analytical dataset with delta local table and source table.
+   ![Ex03_02](images/Ex03_02.png)
 1. Add Projection node on source table.
 1. Below mentioned 2 columns expose in the projection node.
 1. ![Ex03_03](images/Ex03_03.png)
