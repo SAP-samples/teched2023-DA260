@@ -17,3 +17,5 @@ The relevant tables for our scenario are
 
 Here is how these tables relate to each other:
 ![Image of EPM Relation Diagram between ABAP Tables](images/EPM_Relation_Table.jpg)
+
+Pleae click here to continue with [Deep Dive 1 - ABAP CDS View based data extraction from SAP S/4HANA on-premise](../dd1/)
