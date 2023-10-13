@@ -26,6 +26,9 @@ Question to answer: Was there a rebate in the net sales compared to the list pri
 * Basic knowhow about the usage and integration of data from SAP S/4HANA
 * General understanding of Enterprise Data Management and ETL (Extraction, Transformation, Load)
 
+## Deep Dives
+- [Deep Dive 1 - Introduction to the Enterprise Procurement Model (EPM) in SAP S/4HANA](exercises/dd0/)
+- [Deep Dive 2 - Introduction to Replication Flows in SAP Datasphere](exercises/dd2/)
 
 ## Exercises
 
@@ -40,10 +43,6 @@ Question to answer: Was there a rebate in the net sales compared to the list pri
 - [Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows](exercises/ex4/) 
 
   
-**OR** Link to the Tutorial Navigator for example...
-
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
-
 **IMPORTANT**
 
 Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
