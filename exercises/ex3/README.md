@@ -9,7 +9,9 @@ This exercise will also simulate the arrival of a new sales order and the change
  - [Exercise 3.3 – Execute Transformation flow to pull the delta records from source](exercises/ex3#exercise-33--execute-transformation-flow-to-pull-the-delta-records-from-source)
  - [Exercise 3.4 – Preview the Analytical dataset model to see the historical and latest pulled records from Transformation flow Delta local table](exercises/ex3#exercise-34--preview-the-analytical-dataset-model-to-see-the-historical-and-latest-pulled-records-from-transformation-flow-delta-local-table)
 
-- ##	Exercise 3.1 - Create an Analytical Dataset model with transformation flow generated target delta table.
+##	Exercise 3.1 - Create an Analytical Dataset model with transformation flow generated target delta table.
+
+Create a view to compare historic price with current price and calculate the rebate the customer got at time or ordering. 
 
 1. Open the Graphical view app from Data builder.
    
@@ -62,7 +64,8 @@ This exercise will also simulate the arrival of a new sales order and the change
 
 
 
-- ##	Exercise 3.2 – Update source table record in Data Maintenance editor
+##	Exercise 3.2 – Update source table record in Data Maintenance editor
+Simulate the change of a sticker price on a product and the new arrival of an a sales order after the price change
 
 1. In above mentioned graphical view,  Open source product table from below mentioned context menu.
    
@@ -107,8 +110,8 @@ This exercise will also simulate the arrival of a new sales order and the change
    
 18. Save the table. “Change Type” column value will change to “I”.
 
-
-- ##	Exercise 3.3 – Execute Transformation flow to pull the delta records from source.
+##	Exercise 3.3 – Execute Transformation flow to pull the delta records from source.
+The execution will load the newly arrived sales order into the target table
 
 1. Go to Data Integration monitor.
    
