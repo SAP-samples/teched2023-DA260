@@ -9,7 +9,10 @@ The Task is to load the CDS Views for
 - Product - Z_CDS_EPM_PD
 - Sales Order - Z_CDS_EPM_SO
 - Sales Order Items - Z_CDS_EPM_SO_I
-in delta mode into Datasphere. Delta mode is required to setup the historic price derivation in the transformation flow later. ![image](https://github.com/SAP-samples/teched2023-DA260/assets/20391663/df5858f0-a223-466b-ab41-2cb796128019)
+
+in delta mode into Datasphere. Delta mode is required to setup the historic price derivation in the transformation flow later.
+
+![image](https://github.com/SAP-samples/teched2023-DA260/assets/20391663/df5858f0-a223-466b-ab41-2cb796128019)
 
 
 Step by Step guide:
