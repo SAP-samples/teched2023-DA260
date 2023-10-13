@@ -1,6 +1,7 @@
 # Exercise 2 - Transforming data using Transformation Flows in SAP Datasphere
 
-In this exercise, we record the historic version of price (sticker price) of a sales order item into a datasphere table which will eventually be used for comparison of historic price with current price as of then. To achieve this, we are going to create a transformation flow which is a new offering from Datasphere. This transformation flow reads data from sales order item delta enabled table and joins it with products table having product sticker and loads the resultant data into target datasphere table that is delta enabled. This transformation flow refreshes the target table every time there is change in product price and it is run.
+In this exercise, we record the historic version of price (sticker price) of a sales order item into a datasphere table which will eventually be used for comparison of historic price with current price as of then. To achieve this, we are going to create a transformation flow which is a new offering from Datasphere. This transformation flow reads data from sales order item delta enabled table and joins it with products table having product sticker and loads the resultant data into target datasphere table that is delta enabled. This transformation flow refreshes the target table for every new sales order item, erery time it is run. This only works if sales order items are added, as we only want persist the prive on creation. Additional logic is required should the source also allows changes in sales order item records, as changes would update the price as well. 
+
 Step by Step Solution guide:
 Refer to the provided solution below for a detailed, step-by-step guide to complete Exercise 2
 
