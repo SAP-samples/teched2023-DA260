@@ -2,17 +2,21 @@
    - Exercise 4.1 – Replication flow with inbound and outbound sources.
 
 
-# Exercise 4 - Egress/Outbound use case via replication flow.
+# Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows.
 
 - ##	Exercise 4.1 - Replication flow with inbound and outbound sources.
 
 1. Go to data builder, Select “New Replication flow” tile.
-1. ![Ex04_01](images/Ex04_01.png)
-1. Select source connection.
-1. ![Ex04_02](images/Ex04_02.png)
-1. Select S4 Hana connection.
-1. ![Ex04_03](images/Ex04_03.png)
-1. After selecting connection, Select source container.
+   ![Ex04_01](images/Ex04_01.png)
+   
+2. Click on *Select source Connection*:
+   ![Ex04_02](images/Ex04_02.png)
+   
+3. In the connection dropdown, please select the *S4HANA* connection.
+   
+   ![Ex04_03](images/Ex04_03.png)
+   
+4. After selecting the connection, click on *Select Source container*
 1. ![Ex04_04](images/Ex04_04.png)
 1. Inside source container, Select CDS View.
 1. ![Ex04_05](images/Ex04_05.png)
