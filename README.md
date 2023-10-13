@@ -30,12 +30,14 @@ Question to answer: Was there a rebate in the net sales compared to the list pri
 ## Exercises
 
 - [Exercise 0 - Getting Guided Experience System access](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 1 - Replicate CDS Views from SAP S/4HANA via Replication Flows to SAP Datasphere](exercises/ex1/)
+- [Exercise 2 - Transforming data using Transformation Flows in SAP Datasphere](exercises/ex2/)
+- [Exercise 3 - Preparing Analytical Dataset with historic and delta records.](exercises/ex3/)
+    - [Exercise 3.1 - Create an Analytical Dataset model with transformation flow generated target delta table](exercises/ex3#exercise-31---create-an-analytical-dataset-model-with-transformation-flow-generated-target-delta-table)
+    - [Exercise 3.2 – Update source table record in Data Maintenance editor](exercises/ex3#exercise-32--update-source-table-record-in-data-maintenance-editor)
+    - [Exercise 3.3 – Execute Transformation flow to pull the delta records from source](exercises/ex3#exercise-33--execute-transformation-flow-to-pull-the-delta-records-from-source)
+    - [Exercise 3.4 – Preview the Analytical dataset model to see the historical and latest pulled records from Transformation flow Delta local table](exercises/ex3#exercise-34--preview-the-analytical-dataset-model-to-see-the-historical-and-latest-pulled-records-from-transformation-flow-delta-local-table)
+- [Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows](exercises/ex4/) 
 
   
 **OR** Link to the Tutorial Navigator for example...
