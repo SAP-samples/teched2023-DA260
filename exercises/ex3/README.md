@@ -65,31 +65,47 @@ This exercise will also simulate the arrival of a new sales order and the change
 - ##	Exercise 3.2 – Update source table record in Data Maintenance editor
 
 1. In above mentioned graphical view,  Open source product table from below mentioned context menu.
-1. ![Ex03_12](images/Ex03_12.png)
-1. Product table opened in table editor.
-1. To edit the data, Open Table with data editor.
-1. ![Ex03_13](images/Ex03_13.png)
-1. In Data Editor, Open table settings.
-1. ![Ex03_14](images/Ex03_14.png)
-1. Apply filter of ProductID : RC-1053
-1. ![Ex03_15](images/Ex03_15.png)
-1. For Product RC-1053, Reduce the price from the original price.
-1. ![Ex03_16](images/Ex03_16.png)
-1. Save the table, Post save “Change Type” column value will be changing to “U”.
-1. Go back to Data Builder landing page, Open “SalesOrders” table.
-1. Open this table also in Data Editor.
-1. Sort the table in descending order based on “SalesOrderId”.
-1. ![Ex03_17](images/Ex03_17.png)
-1. After descending order sort, select the first row and create a duplicate record.
-1. ![Ex03_18](images/Ex03_18.png)
-1. Edit the duplicated record with new SalesOrderId and new columns “Gross Amount”, “NetAmount”, “TaxAmount” values.
-1. Save the table. “Change Type” column value will change to “I”.
-1. Go back to Data builder landing page, Open Table “SalesOrderItems” with “Data Editor”.
-1. Sort the table with “SalesOrderId” in descending order. Select the first record and create duplicate entry of it.
-1. In the duplicated row, Change the “SalesOrderId” column value to above mentioned newly added “SalesOrderId” in the SalesOrder table.
-1. Provide same productid: RC-1053 and Changed the column value of “Gross Amount”, “NetAmount” and “TaxAmount” columns.
-1. ![Ex03_19](images/Ex03_19.png)
-1. Save the table. “Change Type” column value will change to “I”.
+   
+   ![Ex03_12](images/Ex03_12.png)
+   
+2. Product table opened in table editor.
+3. To edit the data, Open Table with data editor.
+   
+   ![Ex03_13](images/Ex03_13.png)
+   
+4. In Data Editor, Open table settings.
+   
+   ![Ex03_14](images/Ex03_14.png)
+   
+5. Apply filter of ProductID : RC-1053
+   
+   ![Ex03_15](images/Ex03_15.png)
+   
+6. For Product RC-1053, Reduce the price from the original price.
+   
+  ![Ex03_16](images/Ex03_16.png)
+  
+7. Save the table, Post save “Change Type” column value will be changing to “U”.
+8. Go back to Data Builder landing page, Open “SalesOrders” table.
+9. Open this table also in Data Editor.
+10. Sort the table in descending order based on “SalesOrderId”.
+    
+   ![Ex03_17](images/Ex03_17.png)
+   
+11. After descending order sort, select the first row and create a duplicate record.
+    
+   ![Ex03_18](images/Ex03_18.png)
+   
+12. Edit the duplicated record with new SalesOrderId and new columns “Gross Amount”, “NetAmount”, “TaxAmount” values.
+13. Save the table. “Change Type” column value will change to “I”.
+14. Go back to Data builder landing page, Open Table “SalesOrderItems” with “Data Editor”.
+15. Sort the table with “SalesOrderId” in descending order. Select the first record and create duplicate entry of it.
+16. In the duplicated row, Change the “SalesOrderId” column value to above mentioned newly added “SalesOrderId” in the SalesOrder table.
+17. Provide same productid: RC-1053 and Changed the column value of “Gross Amount”, “NetAmount” and “TaxAmount” columns.
+    
+   ![Ex03_19](images/Ex03_19.png)
+   
+18. Save the table. “Change Type” column value will change to “I”.
 
 
 - ##	Exercise 3.3 – Execute Transformation flow to pull the delta records from source.
