@@ -74,6 +74,44 @@ To create an analytical dataset model, you will need to create a graphical view 
 1. In the duplicated row, Change the “SalesOrderId” column value to above mentioned newly added “SalesOrderId” in the SalesOrder table.
 1. Provide same productid: RC-1053 and Changed the column value of “Gross Amount”, “NetAmount” and “TaxAmount” columns.
 1. ![Ex03_19](images/Ex03_19.png)
+1. Save the table. “Change Type” column value will change to “I”.
+
+
+- ##	Exercise 3.3 – Execute Transformation flow to pull the delta records from source.
+
+1. Go to Data Integration monitor.
+1. ![Ex03_20](images/Ex03_20.png)
+1. Go to Flow monitor.
+1. Go to transformation flow tab.
+1. ![Ex03_21](images/Ex03_21.png)
+1. Run the transformation flow, which is created in exercise 2.
+1. ![Ex03_22](images/Ex03_22.png)
+1. Wait for Notification to the completion of Transformation flow execution.
+1. Go to transformation flow details.
+1. Select the latest task runs and check the metrics section to verify how many delta records are loaded.
+1. ![Ex03_23](images/Ex03_23.png)
+
+
+- ##	Exercise 3.4 – Preview the Analytical dataset model to see the historical and latest pulled records from Transformation flow Delta local table.
+
+1. Go to Databuilder.
+1. ![Ex03_24](images/Ex03_24.png)
+1. Go to the analytical dataset, which was created in exercise 3.1.
+1. ![Ex03_25](images/Ex03_25.png)
+1. In Graphical view editor, select output node and do the data preview.
+1. Perform filtering on data preview with ProductId: RC-1053, Compare Historic and Current sticker price
+1. ![Ex03_26](images/Ex03_26.png)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
