@@ -11,10 +11,10 @@
    ![Ex04_01](images/Ex04_01.png)
    <br>
 2. Click on *Select source Connection*:
-   <br>
+   
    ![Ex04_02](images/Ex04_02.png)
-   <br>
-3. In the connection dropdown, please select the *S4HANA* connection.
+   
+4. In the connection dropdown, please select the *S4HANA* connection.
    <br>
    ![Ex04_03](images/Ex04_03.png)
    <br>
