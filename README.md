@@ -27,7 +27,8 @@ Question to answer: Was there a rebate in the net sales compared to the list pri
 * General understanding of Enterprise Data Management and ETL (Extraction, Transformation, Load)
 
 ## Deep Dives
-- [Deep Dive 1 - Introduction to the Enterprise Procurement Model (EPM) in SAP S/4HANA](exercises/dd0/)
+- [Deep Dive 0 - Introduction to the Enterprise Procurement Model (EPM) in SAP S/4HANA](exercises/dd0/)
+- [Deep Dive 1 - ABAP CDS View based data extraction from SAP S/4HANA on-premise](exercises/dd1/)
 - [Deep Dive 2 - Introduction to Replication Flows in SAP Datasphere](exercises/dd2/)
 
 ## Exercises
