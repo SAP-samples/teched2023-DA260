@@ -18,32 +18,64 @@ To create an analytical dataset model, you will need to create a graphical view 
 - ##	Exercise 3.1 - Create an Analytical Dataset model with transformation flow generated target delta table.
 
 1. Open the Graphical view app from Data builder.
-1. <img width="396" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/f600f4e0-9e3b-4220-823e-ccda18c1809d">
+1. ![Ex03_01](images/Ex03_01.png)
 1. Create Graphical view of semantic type Analytical dataset with delta local table and source table.
-1. <img width="387" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/1919d61f-2264-4cb3-809b-f75c8b28deb5">
+1. ![Ex03_02](images/Ex03_02.png)
 1. Add Projection node on source table.
 1. Below mentioned 2 columns expose in the projection node.
-1. <img width="387" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/b02b59bd-7b91-4e1a-80c9-0f095e146031">
+1. ![Ex03_03](images/Ex03_03.png)
 1. Perform inner join on projection node and delta local table and map the “PRODUCTID” key column.
 1. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression. 
 1. Go to the output node, Open properties panel. 
 1. Go to attributes section, By this option change column to measure.
-1. <img width="187" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/57671591-b65a-47ce-95d3-bf36934f6e07">
+1. ![Ex03_04](images/Ex03_04.png)
 1. Add below mentioned columns in the measures.
-1. <img width="224" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/fca89d5f-312f-47ba-a44a-6184d7ac28db">
+1. ![Ex03_05](images/Ex03_05.png)
 1. Open Attributes dialog, by clicking on edit icon.
-1. <img width="184" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/8032eabd-c083-4f4c-97fd-320408aefa93">
+1. ![Ex03_06](images/Ex03_06.png)
 1. Set the semantic type (Currency code and Unit of Measure) for below mentioned columns.
-1. <img width="402" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/b1be2d30-8fa8-4fc7-b943-d67f607f7e86">
+1. ![Ex03_07](images/Ex03_07.png)
 1. Deploy the view.
 1. Perform data preview by clicking on context menu preview icon.
-1. <img width="391" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/a1bb508b-dac0-4f7c-b4d2-a21f2f18686b">
+1. ![Ex03_08](images/Ex03_08.png)
 1. Launch preview settings, by this icon.
-1. <img width="137" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/b0f7ac70-7a7f-48e4-aeee-f4d098d2c1d1">
+1. ![Ex03_09](images/Ex03_09.png)
 1. Apply filter on preview.
-1. <img width="280" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/bf032c31-634c-4e2a-85bd-02c939011cca">
+1. ![Ex03_10](images/Ex03_10.png)
 1. In the preview, historic sticker price and current sticker price for filtered productid.
-1. <img width="355" alt="image" src="https://github.com/SAP-samples/teched2023-DA260/assets/147159572/4c6a2262-2e9f-422d-b311-cfa58772d2f9">
+1. ![Ex03_11](images/Ex03_11.png)
+
+
+
+- ##	Exercise 3.2 – Update source table record in Data Maintenance editor
+
+1. In above mentioned graphical view,  Open source product table from below mentioned context menu.
+1. ![Ex03_12](images/Ex03_12.png)
+1. Product table opened in table editor.
+1. To edit the data, Open Table with data editor.
+1. ![Ex03_13](images/Ex03_13.png)
+1. In Data Editor, Open table settings.
+1. ![Ex03_14](images/Ex03_14.png)
+1. Apply filter of ProductID : RC-1053
+1. ![Ex03_15](images/Ex03_15.png)
+1. For Product RC-1053, Reduce the price from the original price.
+1. ![Ex03_16](images/Ex03_16.png)
+1. Save the table, Post save “Change Type” column value will be changing to “U”.
+1. Go back to Data Builder landing page, Open “SalesOrders” table.
+1. Open this table also in Data Editor.
+1. Sort the table in descending order based on “SalesOrderId”.
+1. ![Ex03_17](images/Ex03_17.png)
+1. After descending order sort, select the first row and create a duplicate record.
+1. ![Ex03_18](images/Ex03_18.png)
+1. Edit the duplicated record with new SalesOrderId and new columns “Gross Amount”, “NetAmount”, “TaxAmount” values.
+1. Save the table. “Change Type” column value will change to “I”.
+1. Go back to Data builder landing page, Open Table “SalesOrderItems” with “Data Editor”.
+1. Sort the table with “SalesOrderId” in descending order. Select the first record and create duplicate entry of it.
+1. In the duplicated row, Change the “SalesOrderId” column value to above mentioned newly added “SalesOrderId” in the SalesOrder table.
+1. Provide same productid: RC-1053 and Changed the column value of “Gross Amount”, “NetAmount” and “TaxAmount” columns.
+1. ![Ex03_19](images/Ex03_19.png)
+
+
 
 
 
