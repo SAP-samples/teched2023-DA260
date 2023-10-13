@@ -274,4 +274,4 @@ We have now enabled our Sales Order object CDS View for Change Data Capture and 
 
 In the next deep dive 2, we test the Initial Load and Delta Load capabilities with a Replication Flow in SAP Datasphere including an introduction to Replication Flows.<br>
 
-Pleae click here to continue with [Deep Dive 2 - Introduction to Replication Flows in SAP Datasphere](exercises/dd2/)
+Pleae click here to continue with [Deep Dive 2 - Introduction to Replication Flows in SAP Datasphere](../dd2/)
