@@ -20,28 +20,45 @@ This exercise will also simulate the arrival of a new sales order and the change
    ![Ex03_02](images/Ex03_02.png)
    
 3. Add Projection node on source table.
-1. Below mentioned 2 columns expose in the projection node.
-1. ![Ex03_03](images/Ex03_03.png)
-1. Perform inner join on projection node and delta local table and map the “PRODUCTID” key column.
-1. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression. 
-1. Go to the output node, Open properties panel. 
-1. Go to attributes section, By this option change column to measure.
-1. ![Ex03_04](images/Ex03_04.png)
-1. Add below mentioned columns in the measures.
-1. ![Ex03_05](images/Ex03_05.png)
-1. Open Attributes dialog, by clicking on edit icon.
-1. ![Ex03_06](images/Ex03_06.png)
-1. Set the semantic type (Currency code and Unit of Measure) for below mentioned columns.
-1. ![Ex03_07](images/Ex03_07.png)
-1. Deploy the view.
-1. Perform data preview by clicking on context menu preview icon.
-1. ![Ex03_08](images/Ex03_08.png)
-1. Launch preview settings, by this icon.
-1. ![Ex03_09](images/Ex03_09.png)
-1. Apply filter on preview.
-1. ![Ex03_10](images/Ex03_10.png)
-1. In the preview, historic sticker price and current sticker price for filtered productid.
-1. ![Ex03_11](images/Ex03_11.png)
+4. Below mentioned 2 columns expose in the projection node.
+  
+   ![Ex03_03](images/Ex03_03.png)
+
+5. Perform inner join on projection node and delta local table and map the “PRODUCTID” key column.
+6.. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression. 
+7. Go to the output node, Open properties panel. 
+8. Go to attributes section, By this option change column to measure.
+
+   ![Ex03_04](images/Ex03_04.png)
+   
+9. Add below mentioned columns in the measures.
+   
+   ![Ex03_05](images/Ex03_05.png)
+   
+10. Open Attributes dialog, by clicking on edit icon.
+
+    ![Ex03_06](images/Ex03_06.png)
+    
+11. Set the semantic type (Currency code and Unit of Measure) for below mentioned columns.
+    
+   ![Ex03_07](images/Ex03_07.png)
+   
+12. Deploy the view.
+13. Perform data preview by clicking on context menu preview icon.
+    
+   ![Ex03_08](images/Ex03_08.png)
+   
+14. Launch preview settings, by this icon.
+    
+   ![Ex03_09](images/Ex03_09.png)
+   
+15. Apply filter on preview.
+    
+   ![Ex03_10](images/Ex03_10.png)
+   
+16. In the preview, historic sticker price and current sticker price for filtered productid.
+    
+   ![Ex03_11](images/Ex03_11.png)
 
 
 
