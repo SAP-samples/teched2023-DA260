@@ -133,12 +133,17 @@ This exercise will also simulate the arrival of a new sales order and the change
 - ##	Exercise 3.4 – Preview the Analytical dataset model to see the historical and latest pulled records from Transformation flow Delta local table.
 
 1. Go to Databuilder.
-1. ![Ex03_24](images/Ex03_24.png)
+   
+   ![Ex03_24](images/Ex03_24.png)
+   
 1. Go to the analytical dataset, which was created in exercise 3.1.
-1. ![Ex03_25](images/Ex03_25.png)
+   
+   ![Ex03_25](images/Ex03_25.png)
+   
 1. In Graphical view editor, select output node and do the data preview.
 1. Perform filtering on data preview with ProductId: RC-1053, Compare Historic and Current sticker price
-1. ![Ex03_26](images/Ex03_26.png)
+   
+   ![Ex03_26](images/Ex03_26.png)
 
 
 
