@@ -6,17 +6,19 @@
 
 - ##	Exercise 4.1 - Replication flow with inbound and outbound sources.
 
-1. Go to data builder, Select “New Replication flow” tile.
+1. Go to data builder, Select “New Replication flow” tile: 
+   <br>
    ![Ex04_01](images/Ex04_01.png)
-   
+   <br>
 2. Click on *Select source Connection*:
+   <br>
    ![Ex04_02](images/Ex04_02.png)
-   
+   <br>
 3. In the connection dropdown, please select the *S4HANA* connection.
-   
+   <br>
    ![Ex04_03](images/Ex04_03.png)
-   
-4. After selecting the connection, click on *Select Source container*
+   <br>
+6. After selecting the connection, click on *Select Source container*
 1. ![Ex04_04](images/Ex04_04.png)
 1. Inside source container, Select CDS View.
 1. ![Ex04_05](images/Ex04_05.png)
