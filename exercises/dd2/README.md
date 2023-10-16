@@ -99,11 +99,11 @@ In the pop-up dialog, please select the folder "CDS" for:
 
 <br>
 
-In a next step, we will add the source data sets (= CDS Views) that will be replicated as part of this example. Therefore, click on the button *Select Data Sets*:
+In a next step, we will add the source data sets (= CDS Views) that will be replicated as part of this example. Therefore, click on the button *Add Source Objects*:
 
 <br>
 
-![](images/Select_Source.jpg)
+![](images/Select_Source_Objects.jpg)
 
 <br>
 
@@ -117,9 +117,9 @@ Once the *TMP* folder is selected, use teh search bar to search for "Z_CDS", hin
 ![](images/Select_CDS_Views.jpg)
 <br>
 
-Click on "Next" and "..." to add the four DS Views to your Replication FLow:
+Click on *Next* and *Add Selection* to add the four CDS Views to your Replication FLow:
 
-![](images/Select_CDS_2.jpg)
+![](images/Add_Selection.jpg)
 
 After the selection is sucessfull, you will see that the CDS Views are now available in your Replication Flow:
 <br>
@@ -146,7 +146,21 @@ After the selection is sucessfull, you will see that the CDS Views are now avail
   
 <br>
 
+There are different configurations possible for your Replication Flow in the modelling user interface.
+
+1) Target system specific settings on Replication Flow level
+2) Replication object specific settings on data set level (e.g. projections incl. filtering or options in the settings tab)
+
+
+**Target system specific settings on Replication Flow level**
 <br>
+Depending on the target system, there are specific settings you can configure using the following configuration button next to the Target system you selected:
+
+In case of SAP Datasphere, there are no special settings and therefore the configuration button is greyed out.
+
+For the following target systems (e.g. target object stores and Google Big Query) you can define different configurations when clicking on the "settings" icon next to the selected target connection:
+
+![](images/Target_Configurations.jpg)
 
 - Target connection specific properties that are automatically popping up in the user interface if a certain connection is being specified. <br>
   - Object Stores (HDL Files)
@@ -156,6 +170,18 @@ After the selection is sucessfull, you will see that the CDS Views are now avail
     - **Delimiter** (for CSV)
     - **Header Line** (for CSV)
     - **Orient** (for JSON)
+
+![](images/Target_Object_Store_Settings.jpg)
+
+  - Google BigQuery
+  -   **Write Mode** (Append)
+  -   **Clamp Decimal Floating Point Data Types** (True/False)
+
+![](images/Target_GBQ_Settings.jpg)
+
+**Note**: Users have for most of the target system specific options the possibility to define them on replication flow level (meaning it is valid for all replication objects configured in the replication flow) or on each replication object level inside a replication flow depending on individual preferences. Additionally, users can choose the option *Overwrite Target Settings at Object Level* that is available in the target system settings to overwrite cfongiurations being made on replication object level with the settings that have been made on replication flow level.
+
+  ![](images/Overwrite_settings.jpg)
 
     <br>
 <br>
