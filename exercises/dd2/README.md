@@ -82,19 +82,68 @@ In a second step, please click on "Select Source Container":
 
 ![](images/Select_Container.jpg)
 
+Note: What a conatiner is depend son the individual source system you have selected. The following examples can show what a container can be for the common source systems a Replication FLow supports:
+
+- In case of a database source system, a container is the database schema in which the source data sets are accessible (e.g. SAP HANA Cloud or Microsoft Azure SQL etc.)
+  
+- In case of a SAP ABAP baed system, it is the logical object you want to replicate like:
+    - CDS - for CDS View based replication from SAP S/4HANA
+    - ODP_BW & ODP_SAPI for ODP-based data replication from SAP sources
+    - SLT - Tables for table-based extraction from SAP source systems where you need to select the pre-reated SLT configuration
+
 <br>
 
-In the pop-up dialog, please select the folder "CDS":
+In the pop-up dialog, please select the folder "CDS" for:
 
 ![](images/Select_CDS.jpg)
 
 <br>
 
+In a next step, we will add the source data sets (= CDS Views) that will be replicated as part of this example. Therefore, click on the button *Select Data Sets*:
+
+<br>
+
+![](images/Select_Source.jpg)
+
+<br>
+
+In the following dialog, we will browse to the location where the CDS Views are located. IN this example four Custom CDS Views have beein created that are located in the *TMP* folder:
+<br>
+![](images/Select_TMP.jpg)
+<br>
+
+Once the *TMP* folder is selected, use teh search bar to search for "Z_CDS", hint enter to start the seacrh and in this scenario we select the following four CDS Views:
+<br>
+![](images/Select_CDS_Views.jpg)
+<br>
+
+Click on "Next" and "..." to add the four DS Views to your Replication FLow:
+
+![](images/Select_CDS_2.jpg)
+
+After the selection is sucessfull, you will see that the CDS Views are now available in your Replication Flow:
+<br>
+![](images/Replication_Flow_CDS_Selected.jpg)
+<br>
+
 - *Target Connection*
 
-  Define your target connection as part of the data replciation scenario. In this case we replicate the data from SAP S/4HANA to SAP Datapshere local tables as target system:
-  
+  Define your target connection as part of the data replciation scenario. In this case we replicate the data from SAP S/4HANA to SAP Datapshere local tables as target system.
 
+  To select the target connection, please click on the following button in your Replication Flow:
+
+  ![](images/Select_Target_Connection.jpg)
+
+  In this example, we will replicate CDS Views from SAP S/4HANA to SAP Datasphere as target system. Therefore, please choose "SAP Datasphere" in the dialog:
+  <br>
+  ![](images/Select_Target_Datasphere.jpg) 
+  <br>
+  Note: The SAP Datasphere connection is automtaically ceated in your SAP Datasphere system and you do not need to create it in the "Connection" application in SAP Datasphere, where you create connection to remote systems such as the SAP S/4HANA source connection ins this example. <br>
+
+  You will recognize that the "Target Container" is automatcially being filled with the name of the space your are currently logged in. This is currently the expected behavior as the replication flow will always load the data to your local space where replication flow is being created in case you select SAP Datasphere as target system. Wirting into another space in SAP Datasphere is not yet supported. <br>
+
+  ![](images/Select_Target_Container.jpg)
+  
 <br>
 
 <br>
@@ -116,7 +165,7 @@ The below picture illustrates some of configurations available for object store 
 
 ![](images/RF_Create_Object_Store.png)
 
-#### **Configuration settings in the Tasks tab**
+#### **Configuration settings for replication flows**
 
 Once you have defined the main configurations settings in the *Properties* tab, you can go to the *Tasks* tab of your Replication Flow. Inside this tab you will add the actual data sets to your Replication Flow and map it to your target data set. 
 <br>
