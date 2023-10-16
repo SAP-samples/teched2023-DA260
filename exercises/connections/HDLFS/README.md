@@ -13,22 +13,28 @@
    
    ![HDL03](images/HDL03.png)
    
-4. Add host, keystore password as given in below steps. To fill *keystore file* you need to access the “hdl certificate” folder in this Git repository. Browse “keystore.p12” file.
-   
-   ![HDL04](images/HDL04.png)
-   ![HDL05](images/HDL05.png)
-   
-5. HDL_Files Keystore Password: YKNnecFv5KT3vuuiRjfU
-1. HDL_Files Client Key Password: nLw9sE9vHjnSdy2CvAz6
-1. HDL_Files host: a4a7fd04-48e5-44ba-a8ed-3cf47d914f71.files.hdl.prod-eu12.hanacloud.ondemand.com
-1. HDL_DB Credentials:
-    - User: HDLADMIN
-    - Password: 9xanuNkMhJ6MMTJDenbq
-    - Host: a4a7fd04-48e5-44ba-a8ed-3cf47d914f71.iq.hdl.prod-eu12.hanacloud.ondemand.com
-1. Once connection gets added, Validate the connection.
-1. ![HDL06](images/HDL06.png)
-1. After validating the connection, below mentioned toast message appears.
-1. ![HDL07](images/HDL07.png)
+4. Download they kestore.zip file, which is available in this folder to download the required keystore file to your computer. Unpack the zip file and store the keystore file in a location on your local computer.
+
+   ![HDL03](images/HDL04.png)
+
+5. In the step *Configure Connection Properties*, provide the following information for your connection:
+   - **Host**: a4a7fd04-48e5-44ba-a8ed-3cf47d914f71.files.hdl.prod-eu12.hanacloud.ondemand.com
+   - **Root Path**: Please keep  it empty
+   - **Keystore File**: Use the upload function to upload the keystore file you have previously downloaded and unpacked.
+   - **Keystore Password**: Will be provided on-site by your SAP trainers.
+
+  After entering all required information click on *Next*.
+
+  6. Provide a name for your connection, e.g. *HDLFS* as abbreviation for SAP HANA Data lake Files.
+
+     
+  7. Once connection gets added, *Validate* the connection.
+     
+     ![HDL06](images/HDL06.png)
+
+   8. After validating the connection successfully, the following message will appear on the bototm of your screen:
+       
+   ![HDL07](images/HDL07.png)
 
 
 
