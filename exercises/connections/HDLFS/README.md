@@ -38,6 +38,8 @@
        
    ![HDL07](images/HDL07.png)
 
+   **Now you are all set!** You can now continue with [Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows](../ex4/) 
+
 
 
 
