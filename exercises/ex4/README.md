@@ -4,7 +4,7 @@
 
 # Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows.
 
-**Important Note**: Before beginning with this exercis please follow the steps in the following link to create a HDFL connection in your SAP Datasphere user space described in this link: - [HDLFS Connection Creation](../connections/HDLFS/)
+**Important Note**: Before beginning with this exercis please follow the steps in the following link to create a HDFL connection in your SAP Datasphere user space described in this link: [HDLFS Connection Creation](../connections/HDLFS/)
 
 1. Go to data builder, Select “New Replication flow” tile: 
 
