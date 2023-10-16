@@ -5,39 +5,44 @@
 # Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows.
 
 1. Go to data builder, Select “New Replication flow” tile: 
+
    <br>
    ![Ex04_01](images/Ex04_01.png)
    <br>
-2. Click on *Select source Connection*:
+   
+3. Click on *Select source Connection*:
    
    ![Ex04_02](images/Ex04_02.png)
    
-3. In the connection dropdown, please select the *S4HANA* connection.
+4. In the connection dropdown, please select the *S4HANA* connection.
+
    <br>
    ![Ex04_03](images/Ex04_03.png)
    <br>
-4. After selecting the connection, click on *Select Source container*
+   
+6. After selecting the connection, click on *Select Source container*
+
    ![Ex04_04](images/Ex04_04.png)
    
-5. Inside source container, Select *CDS - CDS View*:
+8. Inside source container, Select *CDS - CDS View*:
    
    ![Ex04_05](images/Ex04_05.png)
    
-6. After selecting the container, *Add source objects*:
+9. After selecting the container, *Add source objects*:
    
    ![Ex04_06](images/Ex04_06.png)
    
-7. Select objects from left side folder browser, in *TMP Local Objects* folder.
+10. Select objects from left side folder browser, in *TMP Local Objects* folder.
    
-8. Search Objects inside *TMP Local Objects* folder, with "Z_CDS" prefix. And select all available CDS Views:
+11. Search Objects inside *TMP Local Objects* folder, with "Z_CDS" prefix. And select all available CDS Views:
    
    ![Ex04_07](images/Ex04_07.png)
    
-9. Click *Next* and then click *Add selection*. Wait until the CDS views are imported successfully.
+11. Click *Next* and then click *Add selection*. Wait until the CDS views are imported successfully.
     
    ![Ex04_08](images/Ex04_08.png)
    
-10. After the import is successful, add a target connection:
+11. After the import is successful, add a target connection:
     
    ![Ex04_09](images/Ex04_09.png)
 
@@ -49,7 +54,7 @@
     
    ![Ex04_11](images/Ex04_11.png)
    
-13. Select one of the containers in above mentioned list.
+13. Please select the target container that is matching with the last two digets (Numbers) that are also part of your SAP Datasphere user ID, e.g. if you use user AC60851U**01**, please select the folder teched-**01** as target container.
     
 14. All the target table would be listing like this.
     
