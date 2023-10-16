@@ -152,6 +152,15 @@ In case you want to remove replication objects from your replication flow, pleas
   
 <br>
 
+After selecting the target connection and target container, the target data set name for each replicaiton object will automatically be filled with the same name a the source data set name. The replication flow can either us an already pre-created data set in the target (e.g. a pre-created target table) or you can let the Replication Flow create the target data set in case it is not yet existing.
+
+When selecting a replication object, you can click on the *Additional Options* button; ![](images/Additional_Options.jpg)  next to the target data set name. Here you have the following options to:
+- **Rename target Object** to rename the target data set, e.g. when you want to let the replication flow create a target data set, but you want to change its name
+- **Map to Existing target Object** to map to a pre-created target data set (not available for object stores as target)
+- -**Change Container Path** when using a object store as target system
+
+![](images/Additional_Options_Datasphere.jpg)
+
 There are different configurations possible for your Replication Flow in the modelling user interface.
 
 1) Target system specific settings on Replication Flow level
@@ -202,7 +211,7 @@ Once you have defined the main configurations settings in the *Properties* tab, 
 <br>
 
 For each selected source data set (replication object in your replication flow) there are two ways to configure each replication object using:
-1) the tabs *projection* and *settings* locate din the moiddle of your replication flow
+1) the tabs *projection* and *settings* located in the moiddle of your replication flow
 2) using the configuration panel on the right-hand side of the modelling screen when a replicatoin object is being selected
 
 <br>
@@ -250,7 +259,15 @@ The available settings include:
 
 After you have done all required configurations, you need to save the replication flow using the *Save* button in the top menu bar:
 
-**Note**: There is a validation option that is checking if all required configurations have been defined (e.g. source and target connection, selection of at least one replication object etc.):
+![](images/Save_Replication_Flow.jpg)
+
+The following pop-up will appear where you can specify the name of your replication flow:
+
+![](images/Replication_Flow_Name.jpg)
+
+**Note**: At the moment, replication flows will always have the same name for business as well as technical name, which cannot be changed.
+
+There is a validation option that is checking if all required configurations have been defined (e.g. source and target connection, selection of at least one replication object etc.):
 <br>
 ![](images/Validation.jpg)
 <br>
@@ -326,14 +343,22 @@ In the second layer of the screen you can find the following information about t
 The following sub-chapter describes a deep dive into the topic how a user can integrate the various types of SAP ABAP based systems as a source with Replication Flows. 
 
 We will start with a first high level overview which kind of data sets & artefacts can be integrated with each SAP ABAP system.
-<br><br>
+<br>
 
 ![](images/3-007.JPG)
 
 <br>
 
+The following slide illustrates a high level overview for the minimum versions supported for ach type of SAP ABAP based system:
+
+<br>
+
+![](images/3-008.JPG)
+
+<br>
+
 Now we take this overview and provide some more granular view on the type of SAP System that can be integration with Replication Flows incl. a brief overview on the minimum version that is required. More information about the ABAP integration with SAP Data Intelligence Cloud can be found here: 
-**[SAP Data Intelligence ABAP Integration ](https://launchpad.support.sap.com/#/notes/2890171)**
+**[SAP Data Intelligence / SAP Datasphere - ABAP Integration](https://launchpad.support.sap.com/#/notes/2890171)**
 
 <br>
 
@@ -348,43 +373,35 @@ and for DMIS 2018 SP07 you can check this SAP Note **[SAP Data Intelligence ABAP
 
 ### **Details on Replication Flow architecture**
 
-In the underlying architecture Replication Flows are executed by so called "worker graphs", which is internally built based on SAP Data Intelligence pipelines, but optimized for data replication use cases to overcome the limitations we have seen in the beginning of this deep dive when using regular pipelines. <br>
+In the underlying architecture Replication Flows are executed by so called "worker graphs", which is internally built based on SAP Data Intelligence technology, but optimized for data replication use cases. <br>
 
-A worker graph is being executed in the background in case a user triggers the execution of a Replication Flow and mainly consists of the source & target connectivity + projection & mapping in case the user is defining a filter or changes the structure of the data set. Theoretically, there is no limit for a user to define how much data sets (also known as Tasks) can be added inside a single Replication Flow, but there are some important aspects we will highlight below that influence this decision.<br>
+A worker graph is being executed in the background in case a user triggers the execution of a Replication Flow and mainly consists of the source & target connectivity + projection & mapping in case the user is defining a filter or changes the structure of the data set. There exist currently a limit of max. 500 replication objects that can be added to a single Replication Flow.<br>
 
-**Important Note:** A user cannot create such a worker graph like a regular pipeline and it should only be seen as the technical runtime artefact, which is automatically triggered when a Replication Flow is being executed. The way for creating a Replication Flow should be done via the step by step approach using the *Replications* tab in the Modeler application as described in this deep dive and the exercise.<br>
-Please check below how a worker graph looks like: <br>
+**Important Note:** A user cannot create such a worker graph and should only be seen as the technical runtime artefact, which is automatically triggered when a Replication Flow is being executed. <br>
+Please check below how a worker graph looks like for illustration purposes: <br>
 <br>
 
 ![](images/3-005.JPG)
 
 <br>
 
-In contrast to pipelines, a single worker graph as illustrated above can replicate multiple data sets from the source to the target. Each worker graph has by default a total of 10 connections (5 source and 5 target connections) through which the data can be replicated and by default a single Replication Flow has two worker graphs assigned. This setting can be adjusted so that multiple worker graphs are started for a Replication Flow depending on the use case. Additional information can also be found under the following link:
-**[Sizing Replications ](https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/ea95bb6d8ac24cd6a4ad396ca5e35bc6/00ce7f17afcb40a287c1946b9abbafbe.html)**
-
-
-The number of connections per replication flows can be checked in the monitoring application using the tab "Replications" on a Replication Flow level by clicking the configuration button. More information can be found here when looking for the actions in the "Replications" tab in the
-**[Monitoring application ](https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/ca509b7635484070a655738be408da63/e352e7f1a99e4b5d989db5ae1e5e5d0b.html)**
+In contrast to pipelines, a single worker graph as illustrated above can replicate multiple data sets from the source to the target. Each worker graph has by default a total of 10 connections (5 source and 5 target connections) through which the data can be replicated and by default a single Replication Flow has two worker graphs assigned.
 
 
 <br>
 
 ### **Important Links**
 
-**[TechEd exercises for Replication Flows](../ex3/README.md)**
+**[TechEd exercises for Replication Flows](../ex1/README.md)**
 <br>
 
-**[Step by Step Guide for creating a Replication Flow](https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/1c1341f6911f4da5a35b191b40b426c8/d3acc43c77c848b6a82d899ff6895f99.html)**
+**[Step by Step Guide for creating a Replication Flow](https://help.sap.com/docs/SAP_DATASPHERE/c8a54ee704e94e15926551293243fd1d/25e2bd7a70d44ac5b05e844f9e913471.html)**
 <br>
 
-**[Overview of supported source & target connections](https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/ca509b7635484070a655738be408da63/f4327d3e2f7146a19e76924f8a79454a.html)**
+**[Overview of supported source & target connections](https://help.sap.com/docs/SAP_DATASPHERE/be5967d099974c69b77f4549425ca4c0/eb85e157ab654152bd68a8714036e463.html)**
 <br>
 
 **[Questions? SAP Community](https://community.sap.com/)**
-<br>
-
-**[SAP Data Intelligence ABAP User Guide](https://help.sap.com/docs/SAP_DATA_INTELLIGENCE/3a65df0ce7cd40d3a61225b7d3c86703/8b287f0f0033447c8a57a1bee74cd840.html)**
 <br>
 
 **[SAP Data Intelligence ABAP Integration - Central SAP Note](https://launchpad.support.sap.com/#/notes/2890171)**
