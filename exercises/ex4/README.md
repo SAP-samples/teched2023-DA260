@@ -9,6 +9,7 @@
 1. Go to data builder, Select “New Replication flow” tile: 
 
    <br>
+   
    ![Ex04_01](images/Ex04_01.png)
    <br>
    
