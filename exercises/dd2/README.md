@@ -126,6 +126,12 @@ After the selection is sucessfull, you will see that the CDS Views are now avail
 ![](images/Replication_Flow_CDS_Selected.jpg)
 <br>
 
+In case you want to remove replication objects from your replication flow, please mark the desired object and click on the *remove* button net to the source object name:
+<br>
+![](images/Remove_Replication_Object.jpg)
+<br>
+
+
 - *Target Connection*
 
   Define your target connection as part of the data replciation scenario. In this case we replicate the data from SAP S/4HANA to SAP Datapshere local tables as target system.
@@ -156,95 +162,112 @@ There are different configurations possible for your Replication Flow in the mod
 <br>
 Depending on the target system, there are specific settings you can configure using the following configuration button next to the Target system you selected:
 
-In case of SAP Datasphere, there are no special settings and therefore the configuration button is greyed out.
-
 For the following target systems (e.g. target object stores and Google Big Query) you can define different configurations when clicking on the "settings" icon next to the selected target connection:
 
 ![](images/Target_Configurations.jpg)
 
 - Target connection specific properties that are automatically popping up in the user interface if a certain connection is being specified. <br>
+  - SAP Datasphere
+    - **Delta Capture** (ON / OFF, default: ON)
+
   - Object Stores (HDL Files)
-    - **Group Delta By** (Date, Time) allowing users to define if the delta records should be automatically grouped in folders based on date or time.
+    - **Group Delta By** (Date, Time) allowing users to define if the delta records should be automatically grouped in folders based on date or time. <br>
     - **File Type** (CSV, Parquet, JSON, JSONLines)
     - **Compression** (for Parquet)
     - **Delimiter** (for CSV)
     - **Header Line** (for CSV)
     - **Orient** (for JSON)
-
+      
+ <br>
 ![](images/Target_Object_Store_Settings.jpg)
-
+ <br>
+ 
   - Google BigQuery
-  -   **Write Mode** (Append)
-  -   **Clamp Decimal Floating Point Data Types** (True/False)
-
+      - **Write Mode** (Append)
+      - **Clamp Decimal Floating Point Data Types** (True/False)
+ <br>
 ![](images/Target_GBQ_Settings.jpg)
-
+ <br>
+ 
 **Note**: Users have for most of the target system specific options the possibility to define them on replication flow level (meaning it is valid for all replication objects configured in the replication flow) or on each replication object level inside a replication flow depending on individual preferences. Additionally, users can choose the option *Overwrite Target Settings at Object Level* that is available in the target system settings to overwrite cfongiurations being made on replication object level with the settings that have been made on replication flow level.
-
+ <br>
   ![](images/Overwrite_settings.jpg)
 
     <br>
 <br>
 
-The below picture illustrates some of configurations available for object store target systems:
-<br>
-
-![](images/RF_Create_Object_Store.png)
-
-#### **Configuration settings for replication flows**
+####**Configure Replication Flows**
 
 Once you have defined the main configurations settings in the *Properties* tab, you can go to the *Tasks* tab of your Replication Flow. Inside this tab you will add the actual data sets to your Replication Flow and map it to your target data set. 
 <br>
 
-Open the *Tasks* tab <br>
+For each selected source data set (replication object in your replication flow) there are two ways to configure each replication object using:
+1) the tabs *projection* and *settings* locate din the moiddle of your replication flow
+2) using the configuration panel on the right-hand side of the modelling screen when a replicatoin object is being selected
 
-![](images/RF_Create_Task.png)
+<br>
 
-Click the Create button to add one or multiple data sets, e.g. a CDS View, into your Replication Flow.
-For each selected data set you can perform the following configurations:
+![](images/Configuration_Options.jpg)
 
-- **Source**
+<br>
 
-  Represents your selected source data set and cannot be changed once selected.
+**Configuration options using the tabs "projection" and "settings"**
 
-- **Source Filter**
-
-  Optionally you can define a filter on one or multiple columns if you do not want to load the complete source data set.
-
-- **Mapping**
-
-  By default all columns from the source data set are being replicated to the target data set using an auto mapping with the exact same column names in the source & target data set. You can use the mapping dialog to customize the standard mapping, e.g. if the column names differ from each other.
-  Additionally, you can remove columns that are not needed and also create additional columns and either map new columns to existing column of fill it with constant values or pre-defined functions (e.g. CURRENT_DATE). Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in HANA Cloud, you can create additional columns.
-
-- **Target**
-
-  Select the target data set in which the data should be replicated. By default, the same name from the source data set is being used, but you can also change the default name and either select a pre-defined target data set or let the Replication Flow create the target data set.
-
-- **Load Type**
-
-  Select the load type for each Task where you can select Initial  Only or Initial and Delta. Initial Only will load the data via a full load without any change data capture (CDC) or delta capabilities. Initial and Delta will perform the initial load of a data set followed by replicating all changes (inserts, updates, deletes) for this data set.
+- **Settings**
+  
+   - **Load Type**:
+     Select the load type for each Task where you can select Initial  Only or Initial and Delta. Initial Only will load the data via a full load without any change data capture (CDC) or delta capabilities. Initial and Delta will perform the initial load of a data set followed by replicating all changes (inserts, updates, deletes) for this data set.
   Furthermore, the required technical artefacts on the source to initiate the delta processes are automatically being created.
 
-- **Truncate**
+   - **Truncate**
+      A check box that allows users to clean-up the target data set, e.g. in case a user want to re-initialize the data replication with a new initial load.
 
-  A check box that allows users to clean-up the target data set, e.g. in case a user want to re-initialize the data replication with a new initial load.
+![](images/Settings.jpg)
+
+- **Projection**
+
+  In case no projections have been defined, the display will be empty and to add a projection plase follow the steps in the paragraph where we eplain the configuration options in the side panel.
+  
+![](images/Projection.jpg)
+
+  By default all columns from the source data set are being replicated to the target data set using an auto mapping with the exact same column names in the source & target data set. You can use the mapping dialog to customize the standard mapping, e.g. if the column names differ from each other. Additionally, you can remove columns that are not needed and also create additional columns and either map new columns to existing column of fill it with constant values or pre-defined functions (e.g. CURRENT_TIME, CURRENT_DATE). 
+Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in SAP Datasphere, you cannot create additional columns as the tagret structure is defined by the existing table. In such a case you can either let the replication flow create a new target table or adjust the pre-created table with new structure.
+
+  **Note**: At the moment a user can only provide one projection per replication objetc and not multiple ones. There might be cases where columns from the source data set are not visible in the dialog and automatically being removed. The reason for this can be for example that the column is using a data type, which is not yet supported by replication flows. You can check the following SAP Note for details: https://me.sap.com/notes/3297105/E.
+
+**Configuration options using the replication object configuration panel"**
+
+When selecting a replication object, the following configuratoin panel appears on the right in which you can perform various configurations for each individual replication object in your replication flow:
+
+![](images/Configuration_Panel.jpg)
+
+The available settings include:
+
+- Adding a *Projection*
+- Changing *Settings* including configuration of load type, truncate option and specific configuration parameters that are also available in the previous paragraphs in other UI controls.
+
+**Note**: In this case the user is able to provide granular configurations for each individual replication object in case the settings on replication flow level are not sufficient.
+
+After you have done all required configurations, you need to save the replication flow using the *Save* button in the top menu bar:
+
+**Note**: There is a validation option that is checking if all required configurations have been defined (e.g. source and target connection, selection of at least one replication object etc.):
+<br>
+![](images/Validation.jpg)
+<br>
+
+As a next step, you need to deploy the replication flow using the *Deploy* button in the tpo menu bar:
+
+**Note**: During the deployment several checks will be performed in background to check if the replication flow does fullfill all pre-requsities and is ready to be executed. 
+
+The deployment process will also make sure that the necessary run-time artefacts are being generated before you can finally start a Replication Flow. In case of any errors during the deployment, please check the displayed error message that can be checked using the notification icon in the upper right corner of your Datasphere screen:
+
+![](images/Deplyoment_Error.jpg)
+
+In case the deployment is executed successfully, click the **Run** button to start your Replication Flow:
+![](images/Execute_Replication_Flow.png)
 
 
-![](images/RF_Create_Task.png)
-
-Before you can run a Replication Flow, you can hit the **Validate** button in the top menu bar 
-![](images/RF_Validate_Button.png) to check if all necessary configurations are specified. If this is the case, you should receive a popup indicating that validation was successful:
-
-![](images/RF_Validation_Check.png)
-
-Next, you can **Deploy** the Replication Flow by clicking the deploy button in the top menu bar:
-![](images/RF_Deploy_Button.png)
-
-The deployment process will make sure that the necessary run-time artefacts are being generated before you can finally start a Replication Flow by clicking the **Run** button:
-![](images/RF_Run_Button.png)
-
-
-#### **Monitoring of Replication Flows**
+### **Monitoring of Replication Flows**
 
 Monitoring Replication Flows is embedded inside the SAP Data Intelligence Cloud Modeler application. You can either use the *Go To Monitoring* button inside the Modeler application within the Replication Flow dialog or directly open the Monitoring application from the SAP Data Intelligence Cloud Launchpad:
 <br>
