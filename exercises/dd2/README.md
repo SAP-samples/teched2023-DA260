@@ -54,31 +54,31 @@ This sub-chapter will provide an overview for how to create a Replication Flow i
 #### **Configuration settings in the Properties tab**
 <br>
 First of all we open the Data Builder application in SAP Datasphere:
+<br>
 
 ![](images/DataBuilder.jpg)
-
 <br>
 
 In the Data Builder, you can open the "Flows" tab where you can finally create a Replication Flow:
 
 ![](images/Create_Replication_Flow.jpg)
 
-- *Source Connection*
+- Configure *Source Connection*
 
 <br>
 
-First of all, please select a source connection using the SAP Datasphere user guidance "Select Source Connection" button:
+First of all, please select a source connection using the SAP Datasphere user guidance *Select Source Connection* button:
 
 ![](images/Source_Connection.jpg)
 
-Then in the pop-up dialog, please select the connection to SAP S/4HANA by selecting "S4_HANA":
+Then in the pop-up dialog, please select the connection to SAP S/4HANA by selecting *S4_HANA*:
 
 ![](images/S4HANA_Source.jpg)
 
 
 <br>
 
-In a second step, please click on "Select Source Container":
+In a second step, please click on *Select Source Container*:
 
 ![](images/Select_Container.jpg)
 
@@ -93,7 +93,7 @@ Note: What a conatiner is depend son the individual source system you have selec
 
 <br>
 
-In the pop-up dialog, please select the folder "CDS" for:
+In the pop-up dialog, please select the folder *CDS* to leverage the replication of CDS Views from this SAP S/4HANA system:
 
 ![](images/Select_CDS.jpg)
 
@@ -107,7 +107,7 @@ In a next step, we will add the source data sets (= CDS Views) that will be repl
 
 <br>
 
-In the following dialog, we will browse to the location where the CDS Views are located. IN this example four Custom CDS Views have beein created that are located in the *TMP* folder:
+In the following dialog, we will browse to the location where the CDS Views are located. IN this example four Custom CDS Views have beein created that are located in the *TMP - Local Objects* folder:
 <br>
 ![](images/Select_TMP.jpg)
 <br>
@@ -118,8 +118,10 @@ Once the *TMP* folder is selected, use teh search bar to search for "Z_CDS", hin
 <br>
 
 Click on *Next* and *Add Selection* to add the four CDS Views to your Replication FLow:
+<br>
 
 ![](images/Add_Selection.jpg)
+<br>
 
 After the selection is sucessfull, you will see that the CDS Views are now available in your Replication Flow:
 <br>
@@ -132,7 +134,7 @@ In case you want to remove replication objects from your replication flow, pleas
 <br>
 
 
-- *Target Connection*
+- Configure *Target Connection*
 
   Define your target connection as part of the data replciation scenario. In this case we replicate the data from SAP S/4HANA to SAP Datapshere local tables as target system.
 
@@ -144,9 +146,9 @@ In case you want to remove replication objects from your replication flow, pleas
   <br>
   ![](images/Select_Target_Datasphere.jpg) 
   <br>
-  Note: The SAP Datasphere connection is automtaically ceated in your SAP Datasphere system and you do not need to create it in the "Connection" application in SAP Datasphere, where you create connection to remote systems such as the SAP S/4HANA source connection ins this example. <br>
+  **Note**: The SAP Datasphere connection is automtaically ceated in your SAP Datasphere system and you do not need to create it in the "Connection" application in SAP Datasphere, where you create connection to remote systems such as the SAP S/4HANA source connection ins this example. <br>
 
-  You will recognize that the "Target Container" is automatcially being filled with the name of the space your are currently logged in. This is currently the expected behavior as the replication flow will always load the data to your local space where replication flow is being created in case you select SAP Datasphere as target system. Wirting into another space in SAP Datasphere is not yet supported. <br>
+  You will recognize that the *Target Container* is automatcially being filled with the name of the space your are currently logged in. This is currently the expected behavior as the replication flow will always load the data to your local space where replication flow is being created in case you select SAP Datasphere as target system. Wirting into another space in SAP Datasphere is not yet supported. <br>
 
   ![](images/Select_Target_Container.jpg)
   
@@ -157,7 +159,7 @@ After selecting the target connection and target container, the target data set 
 When selecting a replication object, you can click on the *Additional Options* button; ![](images/Additional_Options.jpg)  next to the target data set name. Here you have the following options to:
 - **Rename target Object** to rename the target data set, e.g. when you want to let the replication flow create a target data set, but you want to change its name
 - **Map to Existing target Object** to map to a pre-created target data set (not available for object stores as target)
-- -**Change Container Path** when using a object store as target system
+- **Change Container Path** when using a object store as target system
 
 ![](images/Additional_Options_Datasphere.jpg)
 
@@ -166,6 +168,7 @@ There are different configurations possible for your Replication Flow in the mod
 1) Target system specific settings on Replication Flow level
 2) Replication object specific settings on data set level (e.g. projections incl. filtering or options in the settings tab)
 
+<br>
 
 **Target system specific settings on Replication Flow level**
 <br>
@@ -177,7 +180,7 @@ For the following target systems (e.g. target object stores and Google Big Query
 
 - Target connection specific properties that are automatically popping up in the user interface if a certain connection is being specified. <br>
   - SAP Datasphere
-    - **Delta Capture** (ON / OFF, default: ON)
+    - **Delta Capture** (ON / OFF, default: ON). Please not that this setting is only available in configuration panel explained later in this deep dive section.
 
   - Object Stores (HDL Files)
     - **Group Delta By** (Date, Time) allowing users to define if the delta records should be automatically grouped in folders based on date or time. <br>
@@ -188,20 +191,24 @@ For the following target systems (e.g. target object stores and Google Big Query
     - **Orient** (for JSON)
       
  <br>
+ 
 ![](images/Target_Object_Store_Settings.jpg)
+
  <br>
  
   - Google BigQuery
       - **Write Mode** (Append)
       - **Clamp Decimal Floating Point Data Types** (True/False)
  <br>
+ 
 ![](images/Target_GBQ_Settings.jpg)
+
  <br>
  
 **Note**: Users have for most of the target system specific options the possibility to define them on replication flow level (meaning it is valid for all replication objects configured in the replication flow) or on each replication object level inside a replication flow depending on individual preferences. Additionally, users can choose the option *Overwrite Target Settings at Object Level* that is available in the target system settings to overwrite cfongiurations being made on replication object level with the settings that have been made on replication flow level.
  <br>
+ 
   ![](images/Overwrite_settings.jpg)
-
     <br>
 <br>
 
@@ -243,6 +250,7 @@ For each selected source data set (replication object in your replication flow) 
 Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in SAP Datasphere, you cannot create additional columns as the tagret structure is defined by the existing table. In such a case you can either let the replication flow create a new target table or adjust the pre-created table with new structure.
 
   **Note**: At the moment a user can only provide one projection per replication objetc and not multiple ones. There might be cases where columns from the source data set are not visible in the dialog and automatically being removed. The reason for this can be for example that the column is using a data type, which is not yet supported by replication flows. You can check the following SAP Note for details: https://me.sap.com/notes/3297105/E.
+  <br>
 
 **Configuration options using the replication object configuration panel"**
 
@@ -368,6 +376,7 @@ Now we take this overview and provide some more granular view on the type of SAP
 
 **Important Note:** It is always recommended to check the central SAP Note mentioned above as well as the individual SAP Note we have for each SAP ABAP System for the minimum pre-requisites as well as implementing all referenced SAP notes to fix known issues, e.g. for integrating SAP S/4HANA 2021 you can check the following Note **[SAP Data Intelligence ABAP Integration - SAP S/4HANA 2021 ](https://launchpad.support.sap.com/#/notes/3085579)**
 and for DMIS 2018 SP07 you can check this SAP Note **[SAP Data Intelligence ABAP Integration - DMIS 2018 SP07 ](https://launchpad.support.sap.com/#/notes/2890171)**.
+Please note that SAP Data Itelligence and SAP Datasphere use primarily the same integration patterns when extracing data from SAP ABAP based systems and therefore a lot of SAP notes mentioning SAP Data Intelligence when using Replication Flows are also valid in the context of using Replication Flows in SAP Datasphere!
 
 <br>
 
@@ -404,5 +413,5 @@ In contrast to pipelines, a single worker graph as illustrated above can replica
 **[Questions? SAP Community](https://community.sap.com/)**
 <br>
 
-**[SAP Data Intelligence ABAP Integration - Central SAP Note](https://launchpad.support.sap.com/#/notes/2890171)**
+**[SAP Data Intelligence / SAP Datasphere - ABAP Integration - Central SAP Note](https://launchpad.support.sap.com/#/notes/2890171)**
 <br>
