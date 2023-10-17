@@ -89,7 +89,7 @@ Simulate the change of a sticker price on a product and the new arrival of an a 
    
    ![Ex03_15](images/Ex03_15.png)
    
-6. For Product RC-1053, Reduce the price from the original price.
+6. For Product RC-1053, Reduce the price from the original price. For example: If Old Price was 4000, Next time update it to less than 4000.
    
   ![Ex03_16](images/Ex03_16.png)
   
