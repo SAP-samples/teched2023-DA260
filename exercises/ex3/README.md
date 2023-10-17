@@ -104,7 +104,7 @@ Simulate the change of a sticker price on a product and the new arrival of an a 
     
    ![Ex03_18](images/Ex03_18.png)
    
-12. Edit the duplicated record with new SalesOrderId and new columns “Gross Amount”, “NetAmount”, “TaxAmount” values.
+12. Edit the duplicated record with new SalesOrderId and new columns “Gross Amount”, “NetAmount”, “TaxAmount” values. For example: Put the Gross amount < newly set Price at step 6, Net Amount = Gross Amount - 100, Tax Amount = 100
 13. Save the table. “Change Type” column value will change to “I”.
 14. Go back to Data builder landing page, Open Table “SalesOrderItems” with “Data Editor”.
 15. Sort the table with “SalesOrderId” in descending order. Select the first record and create duplicate entry of it.
