@@ -48,8 +48,10 @@ Create a view to compare historic price with current price and calculate the reb
     
    ![Ex03_07](images/Ex03_07.png)
    
-12. Deploy the view.
-13. Perform data preview by clicking on context menu preview icon.
+12. Edit all the measures by updating "Semantic Type" and "Unit Column" with below info.
+13. ![Ex03_08](images/Ex03_08.png)
+14. Deploy the view.
+15. Perform data preview by clicking on context menu preview icon.
     
    ![Ex03_08](images/Ex03_08.png)
    
