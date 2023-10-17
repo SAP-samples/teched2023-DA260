@@ -22,19 +22,21 @@ Create a view to compare historic price with current price and calculate the reb
    ![Ex03_02](images/Ex03_02.png)
    
 3. Add Projection node on source table.
-4. Below mentioned 2 columns expose in the projection node.
+4. In Projection node, Change "Price" column to "Current Sticker Price".
+5.  ![Ex03_Price_Change](images/Ex03_Price_Change.png)
+6. Expose below mentioned only 2 columns in the projection node. Current Sticker Price and PRODUCTID
   
-   ![Ex03_03](images/Ex03_03.png)
+    ![Ex03_03](images/Ex03_03.png)
 
-5. Perform inner join on projection node and delta local table and map the “PRODUCTID” key column.
-6. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
-7. ![Ex03_Rebate](images/Ex03_Rebate.png)
-8. Go to the output node, Open properties panel. 
-9. Go to attributes section, By this option change column to measure.
+7. Perform inner join on projection node and delta local table and map the “PRODUCTID” key column.
+8. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
+9. ![Ex03_Rebate](images/Ex03_Rebate.png)
+10. Go to the output node, Open properties panel. 
+11. Go to attributes section, By this option change column to measure.
 
    ![Ex03_04](images/Ex03_04.png)
    
-10. Add below mentioned columns in the measures.
+11. Add below mentioned columns in the measures.
    
    ![Ex03_05](images/Ex03_05.png)
    
