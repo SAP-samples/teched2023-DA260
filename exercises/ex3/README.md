@@ -28,6 +28,7 @@ Create a view to compare historic price with current price and calculate the reb
 
 5. Perform inner join on projection node and delta local table and map the “PRODUCTID” key column.
 6. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
+7. ![Ex03_Rebate](images/Ex03_Rebate.png)
 8. Go to the output node, Open properties panel. 
 9. Go to attributes section, By this option change column to measure.
 
