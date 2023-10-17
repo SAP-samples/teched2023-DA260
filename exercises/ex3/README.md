@@ -152,6 +152,8 @@ The execution will load the newly arrived sales order into the target table
 1. Perform filtering on data preview with ProductId: RC-1053, Compare Historic and Current sticker price
    
    ![Ex03_26](images/Ex03_26.png)
+1. Another price comparison example.
+2. ![Ex03_PriceCompare](images/Ex03_PriceCompare.png)
 
 
 
