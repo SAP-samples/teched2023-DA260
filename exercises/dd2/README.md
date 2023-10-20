@@ -49,9 +49,7 @@ There are partially special configurations available for specific target connect
 ### **Create a Replication Flow in SAP Datasphere** 
 This sub-chapter will provide an overview for how to create a Replication Flow including an explanation for all relevant settings a user needs to define in the different steps.
 
-<br>
 
-<br>
 First of all we open the Data Builder application in SAP Datasphere:
 
 ![](images/DataBuilder.jpg)
