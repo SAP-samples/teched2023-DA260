@@ -135,7 +135,7 @@ In case you want to remove replication objects from your replication flow, pleas
 <br>
 
 
-- Configure *Target Connection*
+#### Configure *Target Connection*
 
   Define your target connection as part of the data replciation scenario. In this case we replicate the data from SAP S/4HANA to SAP Datapshere local tables as target system.
 
@@ -193,31 +193,22 @@ For the following target systems (e.g. target object stores and Google Big Query
     - **Compression** (for Parquet)
     - **Delimiter** (for CSV)
     - **Header Line** (for CSV)
-    - **Orient** (for JSON)
-      
+    - **Orient** (for JSON)    
  <br>
  
 ![](images/Target_Object_Store_Settings.jpg)
 
  <br>
- 
-  - Google BigQuery
+  - In future, once supported as target system: Google BigQuery:
       - **Write Mode** (Append)
       - **Clamp Decimal Floating Point Data Types** (True/False)
  <br>
+ **Note:** For details around delivery of BigQuery and other connectors please check our SAP Datasphere Roadmap Explorer:
  
-![](images/Target_GBQ_Settings.jpg)
+ [SAP Datasphere Roadmap Explorer ](https://roadmaps.sap.com/board?range=FIRST-LAST&PRODUCT=73555000100800002141&FT=INTEGRATION#Q4%202023)
+ 
 
- <br>
- 
-**Note**: Users have for most of the target system specific options the possibility to define them on replication flow level (meaning it is valid for all replication objects configured in the replication flow) or on each replication object level inside a replication flow depending on individual preferences. Additionally, users can choose the option *Overwrite Target Settings at Object Level* that is available in the target system settings to overwrite cfongiurations being made on replication object level with the settings that have been made on replication flow level.
- <br>
- 
-  ![](images/Overwrite_settings.jpg)
-    <br>
-<br>
-
-####**Configure Replication Flows**
+#### Configure Replication Flow Settings
 
 Once you have defined the main configurations settings in the *Properties* tab, you can go to the *Tasks* tab of your Replication Flow. Inside this tab you will add the actual data sets to your Replication Flow and map it to your target data set. 
 <br>
@@ -237,7 +228,7 @@ For each selected source data set (replication object in your replication flow) 
 - **Settings**
   
    - **Load Type**:
-     Select the load type for each Task where you can select Initial  Only or Initial and Delta. Initial Only will load the data via a full load without any change data capture (CDC) or delta capabilities. Initial and Delta will perform the initial load of a data set followed by replicating all changes (inserts, updates, deletes) for this data set.
+     Select the load type for each Task where you can select *Initial Only* or *Initial and Delta*. *Initial Only* will load the data via a full load without any change data capture (CDC) or delta capabilities. *Initial and Delta* will perform the initial load of a data set followed by replicating all changes (inserts, updates, deletes) for this data set.
   Furthermore, the required technical artefacts on the source to initiate the delta processes are automatically being created.
 
    - **Truncate**
@@ -247,14 +238,17 @@ For each selected source data set (replication object in your replication flow) 
 
 - **Projection**
 
-  In case no projections have been defined, the display will be empty and to add a projection plase follow the steps in the paragraph where we eplain the configuration options in the side panel.
+  In case no projections have been defined, the display will be empty and to add a projection, please follow the steps in the paragraph where we explain the configuration options in the side panel.
   
 ![](images/Projection.jpg)
 
-  By default all columns from the source data set are being replicated to the target data set using an auto mapping with the exact same column names in the source & target data set. You can use the mapping dialog to customize the standard mapping, e.g. if the column names differ from each other. Additionally, you can remove columns that are not needed and also create additional columns and either map new columns to existing column of fill it with constant values or pre-defined functions (e.g. CURRENT_TIME, CURRENT_DATE). 
+  By default all columns from the source data set are being replicated to the target data set using an auto mapping with the exact same column names in the source & target data set. You can use the mapping dialog to customize the standard mapping, e.g. if the column names differ from each other. Additionally, you can remove columns that are not needed and also create additional columns and either map new columns to existing column of fill it with constant values or pre-defined functions (e.g. CURRENT_TIME, CURRENT_DATE). More information about mapping capabilities can be found here:
+    [Replication Flow Mapping](https://help.sap.com/docs/SAP_DATASPHERE/c8a54ee704e94e15926551293243fd1d/2c7948fdd1a14105a27d0c03af82a56b.html?).
+  
 Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in SAP Datasphere, you cannot create additional columns as the tagret structure is defined by the existing table. In such a case you can either let the replication flow create a new target table or adjust the pre-created table with new structure.
 
-  **Note**: At the moment a user can only provide one projection per replication objetc and not multiple ones. There might be cases where columns from the source data set are not visible in the dialog and automatically being removed. The reason for this can be for example that the column is using a data type, which is not yet supported by replication flows. You can check the following SAP Note for details: https://me.sap.com/notes/3297105/E.
+  **Note**: At the moment a user can only provide one projection per replication objetc and not multiple ones. There might be cases where columns from the source data set are not visible in the dialog and automatically being removed. The reason for this can be for example that the column is using a data type, which is not yet supported by replication flows. You can check the following SAP Note for details: 
+  [SAP Note](https://me.sap.com/notes/3297105/E).
   <br>
 
 **Configuration options using the replication object configuration panel"**
@@ -270,7 +264,7 @@ The available settings include:
 
 **Note**: In this case the user is able to provide granular configurations for each individual replication object in case the settings on replication flow level are not sufficient.
 
-After you have done all required configurations, you need to save the replication flow using the *Save* button in the top menu bar:
+After you have done all required configurations, you need to save the replication flow using the *Save* button ![](images/Save_Button.jpg) in the top menu bar:
 
 ![](images/Save_Replication_Flow.jpg)
 
@@ -280,12 +274,17 @@ The following pop-up will appear where you can specify the name of your replicat
 
 **Note**: At the moment, replication flows will always have the same name for business as well as technical name, which cannot be changed.
 
-There is a validation option that is checking if all required configurations have been defined (e.g. source and target connection, selection of at least one replication object etc.):
+There is a validation option that is checking if all required configurations have been defined (e.g. source and target connection, selection of at least one replication object etc.). You need to click ont he following icon to retrieve detailed information in case it is appearing in red:
 <br>
 ![](images/Validation.jpg)
 <br>
 
-As a next step, you need to deploy the replication flow using the *Deploy* button in the tpo menu bar:
+in this concrete example, we have not defined any replication object that should be replicated from the defined source system (SAP S/4HANA9 to the defined target system (SAP Datasphere):
+<br>
+![](images/Validation_Example.jpg)
+<br>
+
+As a next step, you need to deploy the replication flow using the *Deploy* button in the top menu bar:
 
 **Note**: During the deployment several checks will be performed in background to check if the replication flow does fullfill all pre-requsities and is ready to be executed. 
 
