@@ -198,7 +198,7 @@ For the following target systems (e.g. target object stores and Google Big Query
       - **Write Mode** (Append)
       - **Clamp Decimal Floating Point Data Types** (True/False)
 
- **Note:** For details around delivery of BigQuery and other connectors please check our SAP Datasphere Roadmap Explorer:
+ **Note:** For details around future delivery of Google BigQuery and other future connectivity, please check our SAP Datasphere Roadmap Explorer for regular updates about future enhancements:
  
  [SAP Datasphere Roadmap Explorer ](https://roadmaps.sap.com/board?range=FIRST-LAST&PRODUCT=73555000100800002141&FT=INTEGRATION#Q4%202023)
  
