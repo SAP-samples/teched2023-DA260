@@ -51,9 +51,9 @@ This sub-chapter will provide an overview for how to create a Replication Flow i
 
 <br>
 
-#### **Configuration settings in the Properties tab**
 <br>
 First of all we open the Data Builder application in SAP Datasphere:
+
 <br>
 
 ![](images/DataBuilder.jpg)
@@ -63,7 +63,7 @@ In the Data Builder, you can open the "Flows" tab where you can finally create a
 
 ![](images/Create_Replication_Flow.jpg)
 
-- Configure *Source Connection*
+#### Configure *Source Connection*
 
 <br>
 
@@ -71,7 +71,7 @@ First of all, please select a source connection using the SAP Datasphere user gu
 
 ![](images/Source_Connection.jpg)
 
-Then in the pop-up dialog, please select the connection to SAP S/4HANA by selecting *S4_HANA*:
+Then in the pop-up dialog, please select the connection to SAP S/4HANA by selecting the connection *S4_HANA*:
 
 ![](images/S4HANA_Source.jpg)
 
@@ -82,7 +82,7 @@ In a second step, please click on *Select Source Container*:
 
 ![](images/Select_Container.jpg)
 
-Note: What a conatiner is depend son the individual source system you have selected. The following examples can show what a container can be for the common source systems a Replication FLow supports:
+Note: What a conatiner is depend son the individual source system you have selected. The following examples can show what a container can be for the common source systems a Replication Flow supports:
 
 - In case of a database source system, a container is the database schema in which the source data sets are accessible (e.g. SAP HANA Cloud or Microsoft Azure SQL etc.)
   
@@ -107,12 +107,12 @@ In a next step, we will add the source data sets (= CDS Views) that will be repl
 
 <br>
 
-In the following dialog, we will browse to the location where the CDS Views are located. IN this example four Custom CDS Views have beein created that are located in the *TMP - Local Objects* folder:
+In the following dialog, we will browse to the location where the CDS Views are located. In this example four Custom CDS Views have been created that are located in the *TMP - Local Objects* folder:
 <br>
 ![](images/Select_TMP.jpg)
 <br>
 
-Once the *TMP* folder is selected, use teh search bar to search for "Z_CDS", hint enter to start the seacrh and in this scenario we select the following four CDS Views:
+Once the *TMP* folder is selected, use the search bar to search for "Z_CDS", hit enter to start the seacrh and in this scenario we select the following four CDS Views:
 <br>
 ![](images/Select_CDS_Views.jpg)
 <br>
@@ -125,6 +125,7 @@ Click on *Next* and *Add Selection* to add the four CDS Views to your Replicatio
 
 After the selection is sucessfull, you will see that the CDS Views are now available in your Replication Flow:
 <br>
+
 ![](images/Replication_Flow_CDS_Selected.jpg)
 <br>
 
@@ -166,7 +167,11 @@ When selecting a replication object, you can click on the *Additional Options* b
 There are different configurations possible for your Replication Flow in the modelling user interface.
 
 1) Target system specific settings on Replication Flow level
-2) Replication object specific settings on data set level (e.g. projections incl. filtering or options in the settings tab)
+2) Replication object specific settings on data set level (e.g. projections incl. filtering or options in the settings tab) using *Object Properties* panel.
+   
+<br>
+
+![](images/Configuration_Settings_Options.jpg)
 
 <br>
 
