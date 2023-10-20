@@ -2,7 +2,7 @@
 
 ### **Overview of Replication Flow core functionality**
 
-Replication flows are provisioned via the so called "Replication Management Service (RMS)" and have been made available to simplify the realization of data replication use cases in SAP Datasphere. Whereas RMS includes the whole data replication service incl. its dependent components, a "Replication Flow" is the name of the artefact that a user creates & maintaines inside the SAP Datasphere Data Builder application. The main capabilities and functional foundation are visualized in the following illustration:
+Replication flows are provisioned via the so called "Replication Management Service (RMS)" and have been made available to simplify the realization of data replication use cases in SAP Datasphere. Whereas RMS includes the whole data replication service incl. its dependent components, a "Replication Flow" is the name of the artefact that a user creates & maintains inside the SAP Datasphere Data Builder application. The main capabilities and functional foundation are visualized in the following illustration:
 <br><br>
 ![](images/overview.jpg)
 <br>
@@ -12,7 +12,7 @@ The main functionalities of Replication Flows cover:
 - Model data replication from a selected source to a selected target. In this case a more simplified way of realizing "mass data replication use cases" is being offered to move data very easy from a source to a target system.
 - Initial focus on 1:1 replication of with simple projections and filters, e.g. adding, adjusting and removal of columns as well as ability to provide row-level filters on one or multiple.
 - Simplified realization of cloud-to-cloud replication scenarios without the need of installing and maintaining an on-premise component, e.g. a component like the Data provisioning Agent for HANA SDI is not needed for Replication Flows
--Dedicated user interface for modeling mass data replication via a new interface that is embedded in the existing modeler application and optimized for mass data replication scenarios to offer a simplified user experience.
+-Dedicated user interface for modelling mass data replication via a new interface that is embedded in the existing modeler application and optimized for mass data replication scenarios to offer a simplified user experience.
 - Support initial load as well as delta load capabilities, which is mainly based on trigger-based change-data-capture (CDC) using logging tables on the connected source systems (except when using ODP as source).
 - Support parallelization during initial load through partitioning to achieve a parallelized data load.
 - Support resiliency functionalities & automated recovery in case of error scenarios and also during maintenance of SAP Data Intelligence Cloud.
@@ -79,14 +79,14 @@ In a second step, you need to select a source container by clicking on *Select S
 
 ![](images/Select_Container.jpg)
 
-**Note:** What a conatiner is depend son the individual source system you have selected. The following examples can show what a container can be for the common source systems a Replication Flow supports:
+**Note:** The definition of a container depends on the individual source system you have selected. The following examples can show what a container can be for the common source systems a Replication Flow supports:
 
 - In case of a database source system, a container is the database schema in which the source data sets are accessible (e.g. SAP HANA Cloud or Microsoft Azure SQL etc.)
   
-- In case of a SAP ABAP baed system, it is the logical object you want to replicate like:
+- In case of a SAP ABAP based system, it is the logical object you want to replicate like:
     - CDS - for CDS View based replication from SAP S/4HANA
     - ODP_BW & ODP_SAPI for ODP-based data replication from SAP sources
-    - SLT - Tables for table-based extraction from SAP source systems where you need to select the pre-reated SLT configuration
+    - SLT - Tables for table-based extraction from SAP source systems where you need to select the pre-created SLT configuration
 
 <br>
 
@@ -109,7 +109,7 @@ In the following dialog, we will browse to the location where the CDS Views are 
 ![](images/Select_TMP.jpg)
 <br>
 
-Once the *TMP* folder is selected, use the search bar to search for "Z_CDS", hit enter to start the seacrh and in this scenario we select the following four CDS Views:
+Once the *TMP* folder is selected, use the search bar to search for "Z_CDS", hit enter to start the search and in this scenario we select the following four CDS Views:
 <br>
 ![](images/Select_CDS_Views.jpg)
 <br>
@@ -120,7 +120,7 @@ Click on *Next* and *Add Selection* to add the four CDS Views to your Replicatio
 ![](images/Add_Selection.jpg)
 <br>
 
-After the selection is sucessfull, you will see that the CDS Views are now available in your Replication Flow:
+After the selection is successfull, you will see that the CDS Views are now available in your Replication Flow:
 <br>
 
 ![](images/Replication_Flow_CDS_Selected.jpg)
@@ -134,7 +134,7 @@ In case you want to remove replication objects from your replication flow, pleas
 
 #### Configure *Target Connection*
 
-  Define your target connection as part of the data replciation scenario. In this case we replicate the data from SAP S/4HANA to SAP Datapshere local tables as target system.
+  Define your target connection as part of the data replication scenario. In this case we replicate the data from SAP S/4HANA to SAP Datapshere local tables as target system.
 
   To select the target connection, please click on the following button in your Replication Flow:
 
@@ -144,15 +144,15 @@ In case you want to remove replication objects from your replication flow, pleas
   <br>
   ![](images/Select_Target_Datasphere.jpg) 
   <br>
-  **Note**: The displayed dialog shows only the connections that are supported as target system in Replication Flows. The SAP Datasphere connection is automtaically ceated in your SAP Datasphere system and you do not need to create it in the "Connection" application in SAP Datasphere, where you create connection to remote systems such as the SAP S/4HANA source connection ins this example. <br>
+  **Note**: The displayed dialog shows only the connections that are supported as target system in Replication Flows. The SAP Datasphere connection is automatically created in your SAP Datasphere system and you do not need to create it in the "Connection" application in SAP Datasphere, where you create connection to remote systems such as the SAP S/4HANA source connection ins this example. <br>
 
-  You will recognize that the *Target Container* is automatcially being filled with the name of the space your are currently logged in. This is currently the expected behavior as the replication flow will always load the data to your local space where replication flow is being created in case you select SAP Datasphere as target system. Wirting into another space in SAP Datasphere is not yet supported. <br>
+  You will recognize that the *Target Container* is automatically being filled with the name of the space your are currently logged in. This is currently the expected behaviour as the replication flow will always load the data to your local space where replication flow is being created in case you select SAP Datasphere as target system. Writing into another space in SAP Datasphere is not yet supported. <br>
 
   ![](images/Select_Target_Container.jpg)
   
 <br>
 
-After selecting the target connection and target container, the target data set name for each replicaiton object will automatically be filled with the same name a the source data set name. The replication flow can either us an already pre-created data set in the target (e.g. a pre-created target table) or you can let the Replication Flow create the target data set in case it is not yet existing.
+After selecting the target connection and target container, the target data set name for each replication object will automatically be filled with the same name a the source data set name. The replication flow can either us an already pre-created data set in the target (e.g. a pre-created target table) or you can let the Replication Flow create the target data set in case it is not yet existing.
 
 When selecting a replication object, you can click on the *Additional Options* button ![](images/Additional_Options.jpg)  next to the target data set name. Here you have the following options to:
 - **Rename target Object** to rename the target data set, e.g. when you want to let the replication flow create a target data set, but you want to change its name
@@ -211,8 +211,8 @@ The following section will explain which configurations options are available us
 <br>
 
 For each selected source data set (replication object in your replication flow) there are two ways to configure each replication object using:
-1) the tabs *projection* and *settings* located in the moiddle of your replication flow
-2) using the configuration panel on the right-hand side of the modelling screen when a replicatoin object is being selected
+1) the tabs *projection* and *settings* located in the middle of your replication flow
+2) using the configuration panel on the right-hand side of the modelling screen when a replication object is being selected
 
 <br>
 
@@ -242,15 +242,15 @@ For each selected source data set (replication object in your replication flow) 
   By default, all columns supported from the source data set are being replicated to the target data set using an auto mapping with the exact same column names in the source & target data set. You can use the mapping dialog to customize the standard mapping, e.g. if the column names differ from each other. Additionally, you can remove columns that are not needed and also create additional columns and either map new columns to existing column of fill it with constant values or pre-defined functions (e.g. CURRENT_TIME, CURRENT_DATE). More information about mapping capabilities can be found here:
     [Replication Flow Mapping](https://help.sap.com/docs/SAP_DATASPHERE/c8a54ee704e94e15926551293243fd1d/2c7948fdd1a14105a27d0c03af82a56b.html?).
   
-Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in SAP Datasphere, you cannot create additional columns as the tagret structure is defined by the existing table. In such a case you can either let the replication flow create a new target table or adjust the pre-created table with new structure.
+Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in SAP Datasphere, you cannot create additional columns as the target structure is defined by the existing table. In such a case you can either let the replication flow create a new target table or adjust the pre-created table with new structure.
 
-  **Note**: At the moment a user can only provide one projection per replication objetc and not multiple ones. There might be cases where columns from the source data set are not visible in the dialog and automatically being removed. The reason for this can be for example that the column is using a data type, which is not yet supported by replication flows. You can check the following SAP Note for details: 
+  **Note**: At the moment a user can only provide one projection per replication object and not multiple ones. There might be cases where columns from the source data set are not visible in the dialog and automatically being removed. The reason for this can be for example that the column is using a data type, which is not yet supported by replication flows. You can check the following SAP Note for details: 
   [SAP Note](https://me.sap.com/notes/3297105/E).
   <br>
 
 **Configuration options using the replication object configuration panel"**
 
-When selecting a replication object, the following configuratoin panel appears on the right in which you can perform various configurations for each individual replication object in your replication flow:
+When selecting a replication object, the following configuration panel appears on the right in which you can perform various configurations for each individual replication object in your replication flow:
 
 ![](images/Configuration_Panel.jpg)
 
@@ -284,7 +284,7 @@ in this concrete example, we have not defined any replication object that should
 
 As a next step, you need to deploy the replication flow using the *Deploy* button in the top menu bar:
 
-**Note**: During the deployment several checks will be performed in background to check if the replication flow does fullfill all pre-requsities and is ready to be executed. 
+**Note**: During the deployment several checks will be performed in background to check if the replication flow does fulfil all pre-requisites and is ready to be executed. 
 
 The deployment process will also make sure that the necessary run-time artefacts are being generated before you can finally start a Replication Flow. In case of any errors during the deployment, please check the displayed error message that can be checked using the notification icon in the upper right corner of your Datasphere screen:
 
@@ -296,9 +296,9 @@ In case the deployment is executed successfully, click the **Run** button to sta
 
 ### **Monitoring of Replication Flows**
 
-Monitoring Replication Flows is embedded inside the SAP Datasphere *Data Integration Monitor* application. You can either click the *Data Integration Monitor* application located on the left hand menu panel or inside the *Data Builder* application after you have run the replication flow using the *Open in Data INtegration Monitor* icon on the top menu bar of your replication flow:
+Monitoring Replication Flows is embedded inside the SAP Datasphere *Data Integration Monitor* application. You can either click the *Data Integration Monitor* application located on the left hand menu panel or inside the *Data Builder* application after you have run the replication flow using the *Open in Data Integration Monitor* icon on the top menu bar of your replication flow:
 <br>
-Directly open *Data Integration Montior* application:
+Directly open *Data Integration Monitor* application:
 
 ![](images/Data_Integration_Monitor.jpg)
 
@@ -308,7 +308,7 @@ Launch *Data Integration Monitor* within Data Builder that directly forwards a u
 
 The monitoring of Replication Flows is included into two parts, which is the general *Flow Monitoring* that provides a high level overview of the replication flows (incl. also transformation flows) general monitoring status as well as a detail monitoring screen of each replication flow with detailed information about each replication object.
 
-Once the Data Integration Monitor is being opened via the lext hand menu panel, a user will be re-directed to the main page of the Data Integration Monitor. A user can now navigate to *Flow Monitor* and finally suer the filter option to view all replication flows in the local space:
+Once the Data Integration Monitor is being opened via the left-hand menu panel, a user will be re-directed to the main page of the Data Integration Monitor. A user can now navigate to *Flow Monitor* and finally suer the filter option to view all replication flows in the local space:
 
 ![](images/Flow_Monitor.jpg)
 
@@ -317,7 +317,7 @@ In case a user wants to switch into the detailed monitoring view of a specific r
 ![](images/Access_Detailed_Monitoring.jpg)
 
 
-Inside the detailed monitoring screen auser can access various different information such as the source and target connection, load statistics and the status of each replication object inside the selected replication flow:
+Inside the detailed monitoring screen the user can access various different information such as the source and target connection, load statistics and the status of each replication object inside the selected replication flow:
 
 ![](images/Detailed_Monitoring.jpg)
 
@@ -350,7 +350,7 @@ The following slide illustrates a high level overview for the minimum versions s
 
 Now we take this overview and provide some more granular view on the type of SAP System that can be integration with Replication Flows incl. a brief overview on the minimum version that is required. More information about the ABAP integration with SAP Datasphere can be found here: 
 **[SAP Data Intelligence / SAP Datasphere - ABAP Integration](https://launchpad.support.sap.com/#/notes/2890171)**
-Please note that SAP Data Intelligence and SAP Datasphere use primarily the same integration patterns when extracing data from SAP ABAP based systems and therefore a lot of SAP notes mentioning SAP Data Intelligence when using Replication Flows are also valid in the context of using Replication Flows in SAP Datasphere!
+Please note that SAP Data Intelligence and SAP Datasphere use primarily the same integration patterns when extracting data from SAP ABAP based systems and therefore a lot of SAP notes mentioning SAP Data Intelligence when using Replication Flows are also valid in the context of using Replication Flows in SAP Datasphere!
 
 <br>
 
@@ -365,7 +365,7 @@ and for DMIS 2018 SP07 you can check this SAP Note **[SAP Data Intelligence ABAP
 
 ### **Details on Replication Flow architecture**
 
-In the underlying architecture Replication Flows are executed by so called "worker graphs", which is internally built based on SAP Data Intelligence technology and part of the *Data Intelligence Embdded* environment within SAP Daatsphere, which are optimized for data replication use cases. <br>
+In the underlying architecture Replication Flows are executed by so called "worker graphs", which is internally built based on SAP Data Intelligence technology and part of the *Data Intelligence Embedded* environment within SAP Datasphere, which are optimized for data replication use cases. <br>
 
 A worker graph is being executed in the background in case a user triggers the start of a Replication Flow and mainly consists of the source & target connectivity + projection & mapping in case the user is defining a filter or changes the structure of the data set. There exist currently a limit of max. 500 replication objects that can be added to a single Replication Flow.<br>
 
