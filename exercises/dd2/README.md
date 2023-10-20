@@ -159,16 +159,11 @@ When selecting a replication object, you can click on the *Additional Options* b
 
 ![](images/Additional_Options_Datasphere.jpg)
 
-There are different configurations possible for your Replication Flow in the modelling user interface.
+There are different configurations possible for your Replication Flow in the modelling user interface, which are described in more detail in one of the following paragraphs.
 
 1) Target system specific settings on Replication Flow level
 2) Replication object specific settings on data set level (e.g. projections incl. filtering or options in the settings tab) using *Object Properties* panel.
    
-<br>
-
-![](images/Configuration_Settings_Options.jpg)
-
-<br>
 
 **Target system specific settings on Replication Flow level**
 <br>
@@ -214,7 +209,7 @@ For each selected source data set (replication object in your replication flow) 
 
 <br>
 
-![](images/Configuration_Options.jpg)
+![](images/Configuration_Settings_Options.jpg)
 
 <br>
 
