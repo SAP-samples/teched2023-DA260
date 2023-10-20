@@ -51,7 +51,9 @@ Create a view to compare historic price with current price and calculate the reb
 12. Edit all the measures by updating "Semantic Type" and "Unit Column" with below info.
 13. ![Ex03_Measure_Update](images/Ex03_Measure_Update.png)
 14. Deploy the view.
-15. Perform data preview by clicking on context menu preview icon.
+15. Go to the Products table, as mentioned in the exercise 3.2. Update the Products table "Price" column for ProductID: "RC-1053" with new Price value.
+17. Navigate back to the above mentioned deployed view.
+18. In Data preview, Perform data preview by clicking on context menu preview icon.
     
    ![Ex03_08](images/Ex03_08.png)
    
@@ -63,7 +65,7 @@ Create a view to compare historic price with current price and calculate the reb
     
    ![Ex03_10](images/Ex03_10.png)
    
-16. In the preview, historic sticker price and current sticker price for filtered productid.
+16. Filter the preview with ProductID: RC-1053. In the preview (Newly updated) Current sticker price and Historic sticker price comparison can be seen below.
     
    ![Ex03_11](images/Ex03_11.png)
 
