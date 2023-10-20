@@ -226,7 +226,7 @@ For each selected source data set (replication object in your replication flow) 
 
 ![](images/Settings.jpg)
 
-- **Projection**
+- **Projections**
 
   In case no projections have been defined, the display will be empty and to add a projection, please follow the steps in the paragraph where we explain the configuration options in the side panel.
   
@@ -283,8 +283,8 @@ The deployment process will also make sure that the necessary run-time artefacts
 
 ![](images/Deplyoment_Error.jpg)
 
-In case the deployment is executed successfully, click the **Run** button to start your Replication Flow:
-![](images/Execute_Replication_Flow.png)
+In case the deployment is executed successfully, click the **Run** button ![](images/Run_Button.jpg) to start your Replication Flow:
+![](images/Execute_Replication_Flow.jpg)
 
 
 ### **Monitoring of Replication Flows**
