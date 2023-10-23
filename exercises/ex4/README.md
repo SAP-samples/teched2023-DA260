@@ -6,6 +6,12 @@
 
 **Important Note**: Before beginning with this exercis please follow the steps in the following link to create a HDFL connection in your SAP Datasphere user space described in this link: [HDLFS Connection Creation](../connections/HDLFS/)
 
+Additionally, you need stop the Replication Flow created in exercise 1 in case it is still running! To stop the replication flow created in exercise 1, please open the Data Integration Monitor and click in the *Stop* button located in the upper left menu bar within the detailed monitoring screen of your replication flow:
+
+![Stop_Replication_Flow](images/Stop_Replication_Flow.jpg)
+
+Please wait until your replication flow stopped successfully, before you continue with the steps below!
+
 1. Go to data builder, Select “New Replication flow” tile: 
 
    <br>
@@ -20,6 +26,7 @@
 4. In the connection dropdown, please select the *S4HANA* connection.
 
    <br>
+   
    ![Ex04_03](images/Ex04_03.png)
    <br>
    
