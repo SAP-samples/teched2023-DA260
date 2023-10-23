@@ -103,9 +103,9 @@ In a next step, we will add the source data sets (= CDS Views) that will be repl
 <br>
 
 In the following dialog, we will browse to the location where the CDS Views are located. In this example four custom CDS Views have been created that are located in the *TMP - Local Objects* folder:
-<br>
+
 ![](images/Select_TMP.jpg)
-<br>
+
 
 Once the *TMP* folder is selected, use the search bar to search for "Z_CDS", hit enter to start the search and in this scenario we select the following four CDS Views:
 <br>
@@ -138,9 +138,10 @@ In case you want to remove replication objects from your replication flow, pleas
   ![](images/Select_Target_Connection.jpg)
 
   In this example, we will replicate CDS Views from SAP S/4HANA to SAP Datasphere as target system. Therefore, please choose *SAP Datasphere* in the dialog:
-  <br>
+  
   ![](images/Select_Target_Datasphere.jpg) 
-  <br>
+
+  
   **Note**: The displayed dialog shows only the connections that are supported as target system in Replication Flows. The SAP Datasphere connection is automatically created in your SAP Datasphere system and you do not need to create it in the "Connection" application in SAP Datasphere, where you create connection to remote systems such as the SAP S/4HANA source connection ins this example. <br>
 
   You will recognize that the *Target Container* is automatically being filled with the name of the space your are currently logged in. This is currently the expected behaviour as the replication flow will always load the data to your local space where replication flow is being created in case you select SAP Datasphere as target system. Writing into another space in SAP Datasphere is not yet supported. <br>
@@ -156,6 +157,7 @@ When selecting a replication object, you can click on the *Additional Options* b
 - **Map to Existing target Object** to map to a pre-created target data set (not available for object stores as target)
 - **Change Container Path** when using a object store as target system
 
+
 ![](images/Additional_Options_Datasphere.jpg)
 
 There are different configurations possible for your Replication Flow in the modelling user interface, which are described in more detail in one of the following paragraphs.
@@ -166,8 +168,6 @@ There are different configurations possible for your Replication Flow in the mod
 
 **Target system specific settings on Replication Flow level**
 <br>
-Depending on the target system, there are specific settings you can configure using the following configuration button next to the Target system you selected:
-
 For the following target systems (e.g. target object stores and Google Big Query) you can define different configurations when clicking on the *settings* icon next to the selected target connection:
 
 ![](images/Target_Configurations.jpg)
@@ -182,9 +182,9 @@ For the following target systems (e.g. target object stores and Google Big Query
     - **Compression** (for Parquet)
     - **Delimiter** (for CSV)
     - **Header Line** (for CSV)
-    - **Orient** (for JSON)    
- <br>
+    - **Orient** (for JSON)
  
+      
     ![](images/Target_Object_Store_Settings.jpg)
 
 
@@ -225,13 +225,13 @@ For each selected source data set (replication object in your replication flow) 
    - **Truncate**
       A check box that allows users to clean-up the target data set, e.g. in case a user want to re-initialize the data replication with a new initial load.
 
-![](images/Settings.jpg)
+  ![](images/Settings.jpg)
 
 - **Projections**
 
   In case no projections have been defined, the display will be empty and to add a projection, please follow the steps in the paragraph where we explain the configuration options in the side panel.
   
-![](images/Projection.jpg)
+  ![](images/Projection.jpg)
 
   By default, all columns supported from the source data set are being replicated to the target data set using an auto mapping with the exact same column names in the source & target data set. You can use the mapping dialog to customize the standard mapping, e.g. if the column names differ from each other. Additionally, you can remove columns that are not needed and also create additional columns and either map new columns to existing column of fill it with constant values or pre-defined functions (e.g. CURRENT_TIME, CURRENT_DATE). More information about mapping capabilities can be found here:
     [Replication Flow Mapping](https://help.sap.com/docs/SAP_DATASPHERE/c8a54ee704e94e15926551293243fd1d/2c7948fdd1a14105a27d0c03af82a56b.html?).
@@ -268,14 +268,14 @@ The following pop-up will appear where you can specify the name of your replicat
 **Note**: At the moment, replication flows will always have the same name for business as well as technical name, which cannot be changed.
 
 There is a validation option that is checking if all required configurations have been defined (e.g. source and target connection, selection of at least one replication object etc.). You need to click ont he following icon to retrieve detailed information in case it is appearing in red:
-<br>
+
 ![](images/Validation.jpg)
-<br>
+
 
 in this concrete example, we have not defined any replication object that should be replicated from the defined source system (SAP S/4HANA9 to the defined target system (SAP Datasphere):
-<br>
+
 ![](images/Validation_Example.jpg)
-<br>
+
 
 As a next step, you need to deploy the replication flow using the *Deploy* button in the top menu bar:
 
@@ -286,13 +286,14 @@ The deployment process will also make sure that the necessary run-time artefacts
 ![](images/Deployment_Error.jpg)
 
 In case the deployment is executed successfully, click the **Run** button ![](images/Run_Button.jpg) to start your Replication Flow:
+
 ![](images/Execute_Replication_Flow.jpg)
 
 
 ### **Monitoring of Replication Flows**
 
 Monitoring Replication Flows is embedded inside the SAP Datasphere *Data Integration Monitor* application. You can either click the *Data Integration Monitor* application located on the left hand menu panel or inside the *Data Builder* application after you have run the replication flow using the *Open in Data Integration Monitor* icon on the top menu bar of your replication flow:
-<br>
+
 Directly open *Data Integration Monitor* application:
 
 ![](images/Data_Integration_Monitor_RF.jpg)
