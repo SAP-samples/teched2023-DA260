@@ -35,8 +35,9 @@
      ![HDL06](images/HDL06.png)
 
    8. After validating the connection successfully, the following message will appear on the bototm of your screen:
-       
-   ![HDL07](images/HDL07.png)
+
+      ![HDL07](images/HDL07.png)
+      
 
    **Now you are all set!** You can now continue with [Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows](../ex4/) 
 
