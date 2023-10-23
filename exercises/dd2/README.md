@@ -12,7 +12,7 @@ The main functionalities of Replication Flows cover:
 - Model data replication from a selected source to a selected target. In this case a more simplified way of realizing "mass data replication use cases" is being offered to move data very easy from a source to a target system.
 - Initial focus on 1:1 replication of with simple projections and filters, e.g. adding, adjusting and removal of columns as well as ability to provide row-level filters on one or multiple.
 - Simplified realization of cloud-to-cloud replication scenarios without the need of installing and maintaining an on-premise component, e.g. a component like the Data provisioning Agent for HANA SDI is not needed for Replication Flows
--Dedicated user interface for modelling mass data replication via a new interface that is embedded in the existing modeler application and optimized for mass data replication scenarios to offer a simplified user experience.
+- Dedicated user interface for modelling mass data replication via a new interface that is embedded in the existing modeler application and optimized for mass data replication scenarios to offer a simplified user experience.
 - Support initial load as well as delta load capabilities, which is mainly based on trigger-based change-data-capture (CDC) using logging tables on the connected source systems (except when using ODP as source).
 - Support parallelization during initial load through partitioning to achieve a parallelized data load.
 - Support resiliency functionalities & automated recovery in case of error scenarios and also during maintenance of SAP Data Intelligence Cloud.
@@ -31,7 +31,7 @@ The supported source connectivity includes:
 - SAP S/4HANA on-Premise
 - SAP Business Suite & SAP S/4HANA Foundation via SLT
 - SAP Business Warehouse 
-- Azure MS SQL
+- Azure MS SQL database
 
 The supported target connectivity includes:
 - SAP Datasphere
@@ -40,7 +40,7 @@ The supported target connectivity includes:
 - SAP HANA Data Lake Files (HDL-Files)
 
 
-There are partially special configurations available for specific target connections, such as different file formats for target objects stores (e.g. CSV, Parquet etc.) as well as data format & compression for Kafka as a target. More information about these configuration settings can be found in our product documentation. 
+There are partially special configurations available for specific target connections, such as different file formats for target objects stores (e.g. CSV, Parquet etc.). More information about these configuration settings can be found in our product documentation. 
 
 **[Connectivity configuration parameters ](https://help.sap.com/docs/SAP_DATASPHERE/c8a54ee704e94e15926551293243fd1d/f918d0dc3a424e83b0107e2048e46aac.html?q=replication%20flow)**
 
@@ -88,7 +88,7 @@ In a second step, you need to select a source container by clicking on *Select S
 
 <br>
 
-In the pop-up dialog, please select the folder *CDS* to leverage the replication of CDS Views from this SAP S/4HANA system:
+In the pop-up dialog, please select the folder *CDS* to leverage the replication of CDS Views from the selected SAP S/4HANA system:
 
 ![](images/Select_CDS.jpg)
 
@@ -125,9 +125,8 @@ After the selection is successfull, you will see that the CDS Views are now avai
 <br>
 
 In case you want to remove replication objects from your replication flow, please mark the desired object and click on the *remove* button net to the source object name:
-<br>
+
 ![](images/Remove_Replication_Object.jpg)
-<br>
 
 
 #### Configure *Target Connection*
@@ -186,17 +185,19 @@ For the following target systems (e.g. target object stores and Google Big Query
     - **Orient** (for JSON)    
  <br>
  
-![](images/Target_Object_Store_Settings.jpg)
+    ![](images/Target_Object_Store_Settings.jpg)
 
 
   - In future, once supported as target system: Google BigQuery:
       - **Write Mode** (Append)
       - **Clamp Decimal Floating Point Data Types** (True/False)
 
- **Note:** For details around future delivery of Google BigQuery and other future connectivity, please check our SAP Datasphere Roadmap Explorer for regular updates about future enhancements:
+
+**Note:** For details around future delivery of Google BigQuery and other future connectivity, please check our SAP Datasphere Roadmap Explorer for regular updates about future enhancements:
  
  [SAP Datasphere Roadmap Explorer ](https://roadmaps.sap.com/board?range=FIRST-LAST&PRODUCT=73555000100800002141&FT=INTEGRATION#Q4%202023)
  
+
 
 #### Configure Replication Flow Settings
 
@@ -237,8 +238,9 @@ For each selected source data set (replication object in your replication flow) 
   
 Please note that when browsing and selecting a pre-defined target data sets, e.g. a table in SAP Datasphere, you cannot create additional columns as the target structure is defined by the existing table. In such a case you can either let the replication flow create a new target table or adjust the pre-created table with new structure.
 
-  **Note**: At the moment a user can only provide one projection per replication object and not multiple ones. There might be cases where columns from the source data set are not visible in the dialog and automatically being removed. The reason for this can be for example that the column is using a data type, which is not yet supported by replication flows. You can check the following SAP Note for details: 
-  [SAP Note](https://me.sap.com/notes/3297105/E).
+  **Note**: At the moment a user can only provide one projection per replication object and not multiple ones. There might be cases where columns from the source data set are not visible in the dialog and automatically being removed. The reason for this can be for example that the column is using a data type, which is not yet supported by replication flows. You can check the following SAP Note for details:
+  [Important Considerations for Replication Flows in SAP Datasphere](https://me.sap.com/notes/3297105/E).
+  
   <br>
 
 **Configuration options using the replication object configuration panel"**
@@ -281,7 +283,7 @@ As a next step, you need to deploy the replication flow using the *Deploy* butto
 
 The deployment process will also make sure that the necessary run-time artefacts are being generated before you can finally start a Replication Flow. In case of any errors during the deployment, please check the displayed error message that can be checked using the notification icon in the upper right corner of your Datasphere screen:
 
-![](images/Deplyoment_Error.jpg)
+![](images/Deployment_Error.jpg)
 
 In case the deployment is executed successfully, click the **Run** button ![](images/Run_Button.jpg) to start your Replication Flow:
 ![](images/Execute_Replication_Flow.jpg)
@@ -293,11 +295,11 @@ Monitoring Replication Flows is embedded inside the SAP Datasphere *Data Integra
 <br>
 Directly open *Data Integration Monitor* application:
 
-![](images/Data_Integration_Monitor.jpg)
+![](images/Data_Integration_Monitor_RF.jpg)
 
 Launch *Data Integration Monitor* within Data Builder that directly forwards a user to the detailed monitoring of the selected replication flow:
 
-![](images/Data_Integration_Monitor_RF.jpg)
+![](images/Data_Integration_Monitor.jpg)
 
 The monitoring of Replication Flows is included into two parts, which is the general *Flow Monitoring* that provides a high level overview of the replication flows (incl. also transformation flows) general monitoring status as well as a detail monitoring screen of each replication flow with detailed information about each replication object.
 
