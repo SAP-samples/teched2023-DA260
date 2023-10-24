@@ -9,47 +9,41 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
 **Please wait until your replication flow is stopped successfully, before you continue with the steps below!**
 
 
-1. Go to data builder, Select *New Replication flow* tile: 
-
-   <br>
+1. Go to data builder, Select *New Replication flow* tile:
    
    ![Ex04_01](images/Ex04_01.png)
-   <br>
    
-3. Click on *Select source Connection*:
+2. Click on *Select source Connection*:
    
    ![Ex04_02](images/Ex04_02.png)
    
-4. In the connection dropdown, please select the *S4HANA* connection.
-
-   <br>
+3. In the connection dropdown, please select the *S4HANA* connection.
    
    ![Ex04_03](images/Ex04_03.png)
-   <br>
    
-6. After selecting the connection, click on *Select Source container*
+4. After selecting the connection, click on *Select Source container*
 
    ![Ex04_04](images/Ex04_04.png)
    
-8. Inside source container, Select *CDS - CDS View*:
+5. Inside source container, Select *CDS - CDS View*:
    
    ![Ex04_05](images/Ex04_05.png)
    
-9. After selecting the container, *Add source objects*:
+6. After selecting the container, *Add source objects*:
    
    ![Ex04_06](images/Ex04_06.png)
    
-10. Select objects from left side folder browser, in *TMP Local Objects* folder.
-   
-11. Search Objects inside *TMP Local Objects* folder, with "Z_CDS" prefix. And select all available CDS Views:
+7. Select objects from left side folder browser, in *TMP Local Objects* folder.
+    
+8. Search Objects inside *TMP Local Objects* folder, with "Z_CDS" prefix. And select all available CDS Views:
    
    ![Ex04_07](images/Ex04_07.png)
    
-11. Click *Next* and then click *Add selection*. Wait until the CDS views are imported successfully.
+9. Click *Next* and then click *Add selection*. Wait until the CDS views are imported successfully.
     
    ![Ex04_08](images/Ex04_08.png)
    
-11. After the import is successful, add a target connection:
+10. After the import is successful, add a target connection:
     
    ![Ex04_09](images/Ex04_09.png)
 
