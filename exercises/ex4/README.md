@@ -61,7 +61,7 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
     
    ![Ex04_11](images/Ex04_11.png)
    
-13. Please select the target container that is matching with the last two digets (Numbers) that are also part of your SAP Datasphere user ID, e.g. if you use user AC60851U**01**, please select the folder teched-**01** as target container.
+13. Please select the target container that is matching with the last two digets (Numbers) that are also part of your SAP Datasphere user ID, e.g. if you use user AC60851U**01**, please select the folder teched-**01** as target container. 
     
 14. All the target table would be listing like this.
     
@@ -83,7 +83,7 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
     
    ![Ex04_15](images/Ex04_15.png)
    
-20. In HDLFS connection, search for the container, which was set as target in the replication flow. And there we can see all the tables are successfully replicated in SAP HANA Data Lake Files:
+20. In HDLFS connection, search for the container, which was set as target in the replication flow. And there we can see all the tables are successfully replicated in SAP HANA Cloud, Data Lake Files:
     
    ![Ex04_16](images/Ex04_16.png)
 
