@@ -27,7 +27,7 @@
 
   After entering all required information click on *Next*.
 
-  6. Provide a name for your connection, e.g. *HDLFS* as abbreviation for SAP HANA Data lake Files.
+  6. Provide a name for your connection, e.g. *HDLFS* as abbreviation for SAP HANA Cloud Data Lake Files.
 
      
   7. Once connection gets added, *Validate* the connection.
