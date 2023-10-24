@@ -147,3 +147,5 @@ Once the Initial is done the status of each replication object will switch to st
 
 **This concludes the Exercise 1 where the objective is to replicate data from SAP S/4HANA source into SAP Datasphere.**
 
+Pleae click here to continue with [Exercise 2 - Transforming data using Transformation Flows in SAP Datasphere](../ex2/)
+
