@@ -1,7 +1,3 @@
-- Exercise 4 – Egress/Outbound use case via replication flow.
-   - Exercise 4.1 – Replication flow with inbound and outbound sources.
-
-
 # Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows.
 
 **Important Note**: Before beginning with this exercis please follow the steps in the following link to create a HDFL connection in your SAP Datasphere user space described in this link: [HDLFS Connection Creation](../connections/HDLFS/)
