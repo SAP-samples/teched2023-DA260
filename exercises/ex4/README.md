@@ -6,7 +6,8 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
 
 ![Stop_Replication_Flow](images/Stop_Replication_Flow.jpg)
 
-Please wait until your replication flow stopped successfully, before you continue with the steps below!
+**Please wait until your replication flow stopped successfully, before you continue with the steps below!**
+
 
 1. Go to data builder, Select “New Replication flow” tile: 
 
