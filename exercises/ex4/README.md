@@ -2,7 +2,7 @@
 
 **Important Note**: Before beginning with this exercis please follow the steps in the following link to create a HDFL connection in your SAP Datasphere user space described in this link: [HDLFS Connection Creation](../connections/HDLFS/)
 
-Additionally, you need stop the Replication Flow created in exercise 1 in case it is still running! To stop the replication flow created in exercise 1, please open the Data Integration Monitor and click in the *Stop* button located in the upper left menu bar within the detailed monitoring screen of your replication flow:
+Additionally, you need to stop the Replication Flow created in [exercise 1](../ex1/) in case it is still running! To stop the replication flow created in exercise 1, please open the Data Integration Monitor and click in the *Stop* button located in the upper left menu bar within the detailed monitoring screen of your replication flow:
 
 ![Stop_Replication_Flow](images/Stop_Replication_Flow.jpg)
 
