@@ -23,20 +23,24 @@ Create a view to compare historic price with current price and calculate the reb
    
 3. Add Projection node on source table.
 4. In Projection node, Change "Price" column to "Current Sticker Price".
-5.  ![Ex03_Price_Change](images/Ex03_Price_Change.png)
-6. Expose below mentioned only 2 columns in the projection node. Current Sticker Price and PRODUCTID
+   
+   ![Ex03_Price_Change](images/Ex03_Price_Change.png)
+  
+5. Expose below mentioned only 2 columns in the projection node. Current Sticker Price and PRODUCTID
   
     ![Ex03_03](images/Ex03_03.png)
 
-7. Perform inner join on projection node and delta local table and map the “PRODUCTID” key column.
-8. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
-9. ![Ex03_Rebate](images/Ex03_Rebate.png)
-10. Go to the output node, Open properties panel. 
-11. Go to attributes section, By this option change column to measure.
+6. Perform inner join on projection node and delta local table and map the “PRODUCTID” key column.
+7. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
+   
+   ![Ex03_Rebate](images/Ex03_Rebate.png)
+   
+8. Go to the output node, Open properties panel. 
+9. Go to attributes section, By this option change column to measure.
 
    ![Ex03_04](images/Ex03_04.png)
    
-11. Add below mentioned columns in the measures.
+10. Add below mentioned columns in the measures.
    
    ![Ex03_05](images/Ex03_05.png)
    
@@ -48,24 +52,26 @@ Create a view to compare historic price with current price and calculate the reb
     
    ![Ex03_07](images/Ex03_07.png)
    
-12. Edit all the measures by updating "Semantic Type" and "Unit Column" with below info.
-13. ![Ex03_Measure_Update](images/Ex03_Measure_Update.png)
+13. Edit all the measures by updating "Semantic Type" and "Unit Column" with below info.
+    
+    ![Ex03_Measure_Update](images/Ex03_Measure_Update.png)
+    
 14. Deploy the view.
 15. Go to the Products table, as mentioned in the exercise 3.2. Update the Products table "Price" column for ProductID: "RC-1053" with new Price value.
-17. Navigate back to the above mentioned deployed view.
-18. In Data preview, Perform data preview by clicking on context menu preview icon.
+16. Navigate back to the above mentioned deployed view.
+17. In Data preview, Perform data preview by clicking on context menu preview icon.
     
    ![Ex03_08](images/Ex03_08.png)
    
-14. Launch preview settings, by this icon.
+18. Launch preview settings, by this icon.
     
    ![Ex03_09](images/Ex03_09.png)
    
-15. Apply filter on preview.
+19. Apply filter on preview.
     
    ![Ex03_10](images/Ex03_10.png)
    
-16. Filter the preview with ProductID: RC-1053. In the preview (Newly updated) Current sticker price and Historic sticker price comparison can be seen below.
+20. Filter the preview with ProductID: RC-1053. In the preview (Newly updated) Current sticker price and Historic sticker price comparison can be seen below.
     
    ![Ex03_11](images/Ex03_11.png)
 
@@ -155,10 +161,11 @@ The execution will load the newly arrived sales order into the target table
    
    ![Ex03_26](images/Ex03_26.png)
 1. Another price comparison example.
-2. ![Ex03_PriceCompare](images/Ex03_PriceCompare.png)
+   
+   ![Ex03_PriceCompare](images/Ex03_PriceCompare.png)
 
 
-
+Pleae click here to continue with [Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows](../ex4/)
 
 
 
