@@ -61,29 +61,29 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
     
    ![Ex04_11](images/Ex04_11.png)
    
-13. Please select the target container that is matching with the last two digets (Numbers) that are also part of your SAP Datasphere user ID, e.g. if you use user AC60851U**01**, please select the folder teched-**01** as target container. If you select another folder of another user, the replication will fail.
+   **Important Note:** Please select the target container that is matching with the last two digets (Numbers) that are also part of your SAP Datasphere user ID, e.g. if you use user AC60851U**01**, please select the folder teched-**01** as target container. If you select another folder of another user, the replication will fail.
     
-14. All the target table would be listing like this.
+13. All the target table would be listing like this.
     
    ![Ex04_12](images/Ex04_12.png)
    
-15. Select each target table and change *load type* to “Initial and Delta”:
+14. Select each target table and change *load type* to “Initial and Delta”:
     
    ![Ex04_13](images/Ex04_13.png)
    
-16. Deploy the replication flow.
+15. Deploy the replication flow.
     
-17. After successful deployment, Run the replication flow to create these tables in HDLFS target connection.
+16. After successful deployment, Run the replication flow to create these tables in HDLFS target connection.
     
-18. Once Replication flow execution completes. Go to *New Data Flow* editor available in the *Data Builder* application:
+17. Once Replication flow execution completes. Go to *New Data Flow* editor available in the *Data Builder* application:
     
    ![Ex04_14](images/Ex04_14.png)
    
-19. In Data flow editor, go to source, open the connection tree and browse the HDLFS connection:
+18. In Data flow editor, go to source, open the connection tree and browse the HDLFS connection:
     
    ![Ex04_15](images/Ex04_15.png)
    
-20. In HDLFS connection, search for the container, which was set as target in the replication flow. And there we can see all the tables are successfully replicated in SAP HANA Cloud, Data Lake Files:
+19. In HDLFS connection, search for the container, which was set as target in the replication flow. And there we can see all the tables are successfully replicated in SAP HANA Cloud, Data Lake Files:
     
    ![Ex04_16](images/Ex04_16.png)
 
