@@ -1,4 +1,4 @@
-# HDLFS Connection creation steps:
+# Connection creation for SAP HANA Cloud, Data Lake Files (HDLFS):
 
 
 1. Please open the *Connection* application in your SAP Datasphere space:
