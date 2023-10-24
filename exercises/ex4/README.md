@@ -9,7 +9,7 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
 **Please wait until your replication flow is stopped successfully, before you continue with the steps below!**
 
 
-1. Go to data builder, Select “New Replication flow” tile: 
+1. Go to data builder, Select *New Replication flow* tile: 
 
    <br>
    
@@ -53,7 +53,7 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
     
    ![Ex04_09](images/Ex04_09.png)
 
-11. Select the target connection “HDLFS”:
+11. Select the target connection *HDLFS*, which you have created previously:
     
    ![Ex04_10](images/Ex04_10.png)
    
