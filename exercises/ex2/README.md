@@ -94,3 +94,5 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
     ![ex_02_22](images/ex_02_22.png)
 
 This is the end of Exercise-2 where we successfully created a transformation flow that persists historic sticker price into a target table which would be consumed in next exercise.
+
+Pleae click here to continue with [Exercise 3 - Preparing Analytical Dataset with historic and delta records](../ex3/)
