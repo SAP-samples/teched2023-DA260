@@ -61,7 +61,7 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
     
    ![Ex04_11](images/Ex04_11.png)
    
-13. Please select the target container that is matching with the last two digets (Numbers) that are also part of your SAP Datasphere user ID, e.g. if you use user AC60851U**01**, please select the folder teched-**01** as target container. 
+13. Please select the target container that is matching with the last two digets (Numbers) that are also part of your SAP Datasphere user ID, e.g. if you use user AC60851U**01**, please select the folder teched-**01** as target container. If you select another folder of another user, the replication will fail.
     
 14. All the target table would be listing like this.
     
