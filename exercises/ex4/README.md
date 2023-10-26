@@ -80,6 +80,9 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
 19. In HDLFS connection, search for the folder, which was set as target container in the replication flow including your user ID. And there we can see all the tables are successfully replicated in SAP HANA Cloud, Data Lake Files:
     
    ![Ex04_16](images/Ex04_16.png)
+   
+
+**Done!** You have now successfully completed the last exercise of this Hands-On session DA260. 
 
 
 
