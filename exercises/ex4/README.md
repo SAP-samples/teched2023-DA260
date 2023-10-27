@@ -1,6 +1,6 @@
 # Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows.
 
-**Important Note**: Before beginning with this exercis please follow the steps in the following link to create a HDFL connection in your SAP Datasphere user space described in this link: [Connection Creation for SAP HANA Cloud, Data Lake Files](../connections/HDLFS/)
+**Important Note**: Before beginning with this exercise please follow the steps in the following link to create a HDFL connection in your SAP Datasphere user space described in this link: [Connection Creation for SAP HANA Cloud, Data Lake Files](../connections/HDLFS/)
 
 Additionally, you need to stop the Replication Flow created in [exercise 1](../ex1/) in case it is still running! To stop the replication flow created in exercise 1, please open the Data Integration Monitor and click in the *Stop* button located in the upper left menu bar within the detailed monitoring screen of your replication flow:
 
@@ -51,13 +51,13 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
     
    ![Ex04_10](images/Ex04_10.png)
    
-12. After selecting the target connection, selct the *target container*:
+12. After selecting the target connection, select the *target container*:
     
    **Important Note:** Please select the target container using the following instructions: 
    
-   - In case your user starts with prefix **AC60851U**XX (where XX stands for an integer value that is part of your Datasphere login user), please select the target container (=folder) in HDLFS that is matching the pattern teched-**XX**, where XX are the last two digets (numbers) that are part of your SAP Datasphere user ID, e.g. for AC60851U**01**, please select the folder teched-**01** as target container. If you select another folder of another user, the replication will fail.
+   - In case your user starts with prefix **AC60851U**XX (where XX stands for an integer value that is part of your Datasphere login user), please select the target container (=folder) in HDLFS that is matching the pattern teched-**XX**, where XX are the last two digits (numbers) that are part of your SAP Datasphere user ID, e.g. for AC60851U**01**, please select the folder teched-**01** as target container. If you select another folder of another user, the replication will fail.
      
-   - In case your user starts with prefix **AC61257U**XX (where XX stands for an integer value that is part of your Datasphere login user), please select the target container (=folder) in HDLFS that is matching the pattern teched-1**XX**, where XX are the last two digets that are part of your SAP Datasphere user ID, e.g. for AC61257U**01**, please select the folder teched-**101** as target container. If you select another folder of another user, the replication will fail.
+   - In case your user starts with prefix **AC61257U**XX (where XX stands for an integer value that is part of your Datasphere login user), please select the target container (=folder) in HDLFS that is matching the pattern teched-1**XX**, where XX are the last two digits that are part of your SAP Datasphere user ID, e.g. for AC61257U**01**, please select the folder teched-**101** as target container. If you select another folder of another user, the replication will fail.
 
    ![Ex04_11](images/Ex04_11.png)
     
