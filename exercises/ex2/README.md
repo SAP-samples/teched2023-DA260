@@ -25,9 +25,13 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_02_05](images/ex_02_05.png)
 
-6.	Proceed with Join selection by clicking on it. It will apply inner join between products table and salesorderitems table and the mapping is automatically done with product id in both tables.
+6.	Proceed with Join selection by clicking on it. It will apply inner join between products table and salesorderitems table. The automatic mapping done between NodeKey column of both tables is incorrect. 
 
-    ![ex_02_06](images/ex_02_06.png)
+    ![ex_02_06](images/ex_02_06_01.png)
+
+  	You need to map ProductGuid of SalesOrderItems table with NodeKey of Products table.
+  	
+  	![ex_02_06](images/ex_02_06_01.png)
 
 7.	Both Products and SalesOrderItems are delta enabled by default. It means, you see Delta Capture radio button under Delta Settings selected for both tables in their respective properties panel. Transformation Flow allows only one of the source tables to be delta capture enabled. On clicking the error bubble (red colored) on Products/SalesOrderItems table, you see the error message mentioning the same as shown below.
 
