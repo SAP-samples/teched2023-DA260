@@ -57,7 +57,7 @@ Create a view to compare historic price with current price and calculate the reb
     ![Ex03_Measure_Update](images/Ex03_Measure_Update.png)
     
 14. Deploy the view.
-15. Go to the Products table, as mentioned in the exercise 3.2. Update the Products table "Price" column for ProductID: "RC-1053" with new Price value.
+15. Go to the Products table, as mentioned in the exercise 3.2. Update the Products table "Price" column for any product you choose, ex: product with ProductID: "RC-1053" with new Price value.
 16. Navigate back to the above mentioned deployed view.
 17. In Data preview, Perform data preview by clicking on context menu preview icon.
     
