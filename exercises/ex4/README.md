@@ -53,9 +53,13 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
    
 12. After selecting the target connection, selct the *target container*:
     
-   ![Ex04_11](images/Ex04_11.png)
+   **Important Note:** Please select the target container using the following instructions: 
    
-   **Important Note:** Please select the target container that is matching with the last two digets (Numbers) that are also part of your SAP Datasphere user ID, e.g. if you use user AC60851U**01**, please select the folder teched-**01** as target container. If you select another folder of another user, the replication will fail.
+   - In case your user starts with prefix **AC60851U**XX (where XX stands for an integer value that is part of your Datasphere login user), please select the target container (=folder) in HDLFS that is matching the pattern teched-**XX**, where XX are the last two digets (numbers) that are part of your SAP Datasphere user ID, e.g. for AC60851U**01**, please select the folder teched-**01** as target container. If you select another folder of another user, the replication will fail.
+     
+   - In case your user starts with prefix **AC61257U**XX (where XX stands for an integer value that is part of your Datasphere login user), please select the target container (=folder) in HDLFS that is matching the pattern teched-1**XX**, where XX are the last two digets that are part of your SAP Datasphere user ID, e.g. for AC61257U**01**, please select the folder teched-**101** as target container. If you select another folder of another user, the replication will fail.
+
+   ![Ex04_11](images/Ex04_11.png)
     
 13. All the target table would be listing like this.
     
