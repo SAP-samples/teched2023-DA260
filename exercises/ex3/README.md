@@ -30,7 +30,7 @@ Create a view to compare historic price with current price and calculate the reb
   
     ![Ex03_03](images/Ex03_03.png)
 
-6. Perform inner join on projection node and delta local table and map the “PRODUCTID” key column.
+6. Perform inner join on projection node and delta local table and map the “PRODUCTID” column.
 7. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
    
    ![Ex03_Rebate](images/Ex03_Rebate.png)
@@ -48,16 +48,16 @@ Create a view to compare historic price with current price and calculate the reb
 
     ![Ex03_06](images/Ex03_06.png)
     
-12. Set the semantic type (Currency code and Unit of Measure) for below mentioned columns.
+12. Set the semantic type (Currency code) for below mentioned columns.
     
    ![Ex03_07](images/Ex03_07.png)
    
-13. Edit all the measures by updating "Semantic Type" and "Unit Column" with below info.
+13. Edit all the measures by updating "Semantic Type" with below info.
     
     ![Ex03_Measure_Update](images/Ex03_Measure_Update.png)
     
 14. Deploy the view.
-15. Go to the Products table, as mentioned in the exercise 3.2. Update the Products table "Price" column for any product you choose, ex: product with ProductID: "RC-1053" with new Price value.
+15. Go to the Products table, as mentioned in the exercise 3.2. Update the Products table "Price" column for any product you choose, ex: product with ProductGuid: "42010AA400041EED8CF393ABD2B296BA" with new Price value.
 16. Navigate back to the above mentioned deployed view.
 17. In Data preview, Perform data preview by clicking on context menu preview icon.
     
