@@ -45,11 +45,11 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_02_09](images/ex_02_09.png)
 
-10.	The projection node is inserted and its property panel shows all the columns available for selection or removal. Select all columns except Nodekey, productid and price columns and click on "x" button above to remove them from projection. It means only Nodekey, price and productid columns are selected in projection. Select Price column and click on menu icon adjacent to it to see “Change Name” option. Similarly select Nodekey column and rename it to Pr_Nodekey to avoid collision with nodekey of SalesOrderItems after join.
+10.	The projection node is inserted and its property panel shows all the columns available for selection or removal. Select all columns except Nodekey, productid and price columns and click on "x" button above to remove them from projection. It means only Nodekey, price and productid columns are selected in projection. Select Nodekey column and click on menu icon adjacent to it to see “Change Name” option. Rename it to Pr_Nodekey to avoid collision with nodekey of SalesOrderItems after join.
 
     ![ex_02_10](images/ex_02_10.png)
 
-11.	Click on “Change Name” option to see the Change Name popup and update the name to “Current Sticker Price” and click on Rename button.
+11.	Click on “Change Name” option next to price column to see the Change Name popup and update the name to “Current Sticker Price” and click on Rename button.
 
     ![ex_02_11](images/ex_02_11.png)
 
