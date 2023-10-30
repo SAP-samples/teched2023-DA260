@@ -61,7 +61,7 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
 
    ![Ex04_11](images/Ex04_11.png)
     
-13. All the target table would be listing like this.
+13. All the target tables should be listed like this:
     
    ![Ex04_12](images/Ex04_12.png)
    
