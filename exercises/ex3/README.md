@@ -17,7 +17,7 @@ Create a view to compare historic price with current price and calculate the reb
    
    ![Ex03_01](images/Ex03_01.png)
    
-2. Create Graphical view of semantic type Analytical dataset with delta local table and source table.
+2. Create Graphical view of semantic type Analytical dataset with delta local table that was the target table in transformation flow created in exercise-2 and source table (products table).
    
    ![Ex03_02](images/Ex03_02.png)
    
