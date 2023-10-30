@@ -41,7 +41,7 @@ Create a view to compare historic price with current price and calculate the reb
    ![Ex03_Rebate](images/Ex03_Rebate.png)
    
 10. In Final projection node, Exclude columns "Pr_Nodekey" and PRODUCTID (Which is coming from Product table).
-11. ![Ex03_Rebate](images/Ex03_ExProductId.png)
+11. ![Ex03_Rebate](images/Ex03_ExProductId.png) 
 12. ![Ex03_Rebate](images/Ex03_ExNodeK.png)  
 13. Go to the output node, Open properties panel. 
 14. Go to attributes section, By this option change column to measure.
