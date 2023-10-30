@@ -1,6 +1,6 @@
 # Exercise 2 - Transforming data using Transformation Flows in SAP Datasphere
 
-In this exercise, we record the historic version of price (sticker price) of a sales order item into a datasphere table which will eventually be used for comparison of historic price with current price as of then. To achieve this, we are going to create a transformation flow which is a new offering from Datasphere. This transformation flow reads data from sales order item delta enabled table and joins it with products table having product sticker and loads the resultant data into target datasphere table that is delta enabled. This transformation flow refreshes the target table for every new sales order item, every time it is run. This only works if sales order items are added, as we only want persist the price on creation. Additional logic is required should the source also allows changes in sales order item records, as changes would update the price as well. 
+In this exercise, we record the historic version of price (sticker price) of a sales order item into a datasphere table which will eventually be used for comparison of historic price with current price as of then. To achieve this, we are going to create a transformation flow which is a new offering from Datasphere. This transformation flow reads data from the sales order item delta enabled table and joins it with the products table having product sticker and loads the resultant data into a target Datasphere table that is delta enabled. This transformation flow refreshes the target table for every new sales order item, every time it is run. This only works if sales order items are added, as we only want to persist the price on creation. Additional logic is required should the source also allow changes in sales order item records, as changes would update the price as well. 
 
 Step by Step Solution guide:
 Refer to the provided solution below for a detailed, step-by-step guide to complete Exercise 2
@@ -33,11 +33,11 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
   	
   	![ex_02_06](images/ex_02_06_01.png)
 
-7.	Both Products and SalesOrderItems are delta enabled by default. It means, you see Delta Capture radio button under Delta Settings selected for both tables in their respective properties panel. Transformation Flow allows only one of the source tables to be delta capture enabled. On clicking the error bubble (red colored) on Products/SalesOrderItems table, you see the error message mentioning the same as shown below.
+7.	Both Products and SalesOrderItems are delta enabled by default. It means, you see the Delta Capture radio button under Delta Settings selected for both tables in their respective properties panel. Transformation Flow allows only one of the source tables to be delta capture enabled. On clicking the error bubble (red colored) on the Products/SalesOrderItems table, you see the error message mentioning the same as shown below.
 
   	![ex_02_07](images/ex_02_07.png)
 
-8.	Select “Active Records” option under Delta settings of Products table properties panel. Post that, all the error bubbles would disappear.
+8.	Select “All Active Records” option under Delta settings in the properties panel of the Products table. Post that, all the error bubbles would disappear.
 
    ![ex_02_08](images/ex_02_08.png)
 
@@ -45,7 +45,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_02_09](images/ex_02_09.png)
 
-10.	The projection node is inserted and its property panel shows all the columns available for selection or removal. Select all columns except Nodekey, productid and price columns and click on "x" button above to remove them from projection. It means only Nodekey, price and productid columns are selected in projection. Select Nodekey column and click on menu icon adjacent to it to see “Change Name” option. Rename it to Pr_Nodekey to avoid collision with nodekey of SalesOrderItems after join.
+10.	The projection node is inserted and its property panel shows all the columns available for selection or removal. Select all columns except Nodekey, productid and price columns and click on "x" button above to remove them from projection. It means only Nodekey, price and productid columns are selected in the projection. Select the Nodekey column and click on the menu icon adjacent to it to see “Change Name” option. Rename it to Pr_Nodekey to avoid collision with nodekey of SalesOrderItems after join.
 
     ![ex_02_10](images/ex_02_10.png)
 
@@ -79,7 +79,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_02_18](images/ex_02_18.png)
 
-19.	After deploy is successful, you see the status to be deployed as shown in above snapshot. Click on Run icon in the General Tab in the top. You see the run status in transformation flow properties panel to be updated to Running
+19.	After the deployment process is successful, you see the status to be deployed as shown in above snapshot. Click on the Run icon in the General Tab in the top menu bar (upper left part of your modelling screen). You see the run status in transformation flow properties panel to be updated to Running
 
     ![ex_02_19](images/ex_02_19.png)
 
@@ -87,13 +87,13 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_02_20](images/ex_02_20.png)
 
-21.	You will be taken to Transformation Flow monitoring details screen as below and the run gets completed. You can see the messages and metrics of this run. Metrics shows the number of records processed.
+21.	You will be taken to the Transformation Flow monitoring details screen as shown below and the run gets completed. You can see the messages and metrics of this run. The Metrics section shows the number of processed records.
 
     ![ex_02_21_1](images/ex_02_21_1.png)
 
     ![ex_02_21_2](images/ex_02_21_2.png)
 
-22.	Now go to Data Builder landing page and go to Tables section and open the table which is target in our transformation flow “TechEd_SalesOrderItemsHistoricPrices”. Click on Data preview icon and you see the data having historic sticker price of the product persisted.
+22.	Now go to the Data Builder landing page and go to Tables section and open the table which was defined as target in our Transformation Flow “TechEd_SalesOrderItemsHistoricPrices”. Click on the Data preview icon and you should be able to see the dataset having a "Historic Sticker price" column. 
 
     ![ex_02_22](images/ex_02_22.png)
 
