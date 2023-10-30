@@ -101,14 +101,14 @@ Simulate the change of a sticker price on a product and the new arrival of a sal
    
    ![Ex03_15](images/Ex03_15.png)
    
-6. For ProductGuid/NodeKey: "42010AA400041EED8CF393ABD2B296BA", Reduce the price from the original price. For example: If Old Price was 1200, Next time update it to less than 1100.
+6. For NodeKey: "42010AA400041EED8CF393ABD2B296BA", Reduce the price from the original price. For example: If Old Price was 1200, Next time update it to less than 1100.
    
   ![Ex03_16](images/Ex03_16.png)
   
 7. Save the table, Post save “Change Type” column value will be changing to “U”.
 8. Go back to Data Builder landing page, Open “SalesOrders” table.
 9. Open this table also in Data Editor.
-10. Apply filter of ProductGuid/NodeKey: "42010AA400041EED8CF393ABD2B296BA"
+10. Apply filter of ProductGuid: "42010AA400041EED8CF393ABD2B296BA"
     
    ![Ex03_17](images/Ex03_17.png)
    
@@ -116,12 +116,12 @@ Simulate the change of a sticker price on a product and the new arrival of a sal
     
    ![Ex03_18](images/Ex03_18.png)
    
-12. Edit the duplicated record with new SalesOrderId and new columns “Gross Amount”, “NetAmount”, “TaxAmount” values. For example: Put the Gross amount(1100) < newly set Price at step 6, Net Amount = Gross Amount - 100, Tax Amount = 100
+12. Edit the duplicated record with new unique “itemGuid” value and new columns “Gross Amount”, “NetAmount”, “TaxAmount” values. For example: Put the Gross amount(1100) < newly set Price at step 6, Net Amount = Gross Amount - 100, Tax Amount = 100
 13. Save the table. “Change Type” column value will change to “I”.
 14. Go back to Data builder landing page, Open Table “SalesOrderItems” with “Data Editor”.
 15. Filter SalesOrderItems table with ProductGuid: 42010AA400041EED8CF393ABD2B296BA.
 16. Select first row, add duplicate of the selected row.
-17. In the duplicated row, Change the “itemGuid” column value to above mentioned newly added “itemGuid” in the SalesOrder table.
+17. In the duplicated row, Change the “Nodekey” column value to above mentioned newly added unique “itemGuid” in the SalesOrder table.
 18. Provide same ProductGuid: 42010AA400041EED8CF393ABD2B296BA and Changed the column value of “Gross Amount”, “NetAmount” and “TaxAmount” columns.
     
    ![Ex03_19](images/Ex03_19.png)
