@@ -1,6 +1,6 @@
 # Exercise 1 - Replicate CDS Views from SAP S/4HANA via Replication Flows to SAP Datasphere
 
-This exercise involves creating a Replication Flow that reads data from SAP S/4 HANA CDS Views and replicate that into SAP Datasphere local tables with delta capture as target. This process involves modeling of replication flow and configuring it to consume pre-existing S4 HANA connection and pick the required source objects to copy them into new target tables in SAP Datasphere.
+This exercise involves creating a Replication Flow that reads data from SAP S/4 HANA CDS Views and replicate that into SAP Datasphere local tables with delta capture as target. This process involves modelling of replication flow and configuring it to consume pre-existing S4 HANA connection and pick the required source objects to copy them into new target tables in SAP Datasphere.
 
 In this exercise we will make use of connections that are pre-delivered in your SAP Datasphere free tier landscape, e.g. the SAP S/4HANA on Premise source system. You can check the S4HANA connection in the “Connections” application inside your SAP Datasphere space.
 
@@ -72,7 +72,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_01_11_2](images/ex_1_11_2.png)
 
-      The following popup will appear where you need to select the target connection. In this case please select *SAP Datasphere* as target connection.
+      The following popup will appear where you need to select the target connection. In this case, please select *SAP Datasphere* as target connection.
 
     ![ex_01_12](images/ex_01_12.png)
 
@@ -98,7 +98,7 @@ In the highlighted section it shows the new target local tables that will be cre
 
    ![ex_01_16_0](images/ex_01_16_0.png)
 
-   Change the defaule name being displayed by defining the business name as *Inbound Repflow* which will automatically set technical name as *Inbound_RepFlow*. At the moment, replication flows will always have the same name for business as well as technical name, which cannot be changed.
+   Change the default name being displayed by defining the business name as *Inbound Repflow* which will automatically set technical name as *Inbound_RepFlow*. At the moment, replication flows will always have the same name for business as well as technical name, which cannot be changed.
     
    ![ex_01_16](images/ex_01_16.png)
 
@@ -137,13 +137,13 @@ Once the Initial is done the status of each replication object will switch to st
     
       ![ex_01_22_0](images/ex_01_22_0.png)
 
-    Then select one of the locla tables in SAP datasphere, e.g. SalesOrder, by double clicking on the table.
+    Then select one of the local tables in SAP datasphere, e.g. SalesOrder, by double clicking on the table.
 
-    Click on the previwe button as highlighted below:
+    Click on the preview button as highlighted below:
 
     ![ex_01_22_1](images/ex_01_22_1.png)
 
-    You can now see the data that was replicaed from SAP S/4HANA CDS View containing Sales order information on the bottom of your screen.
+    You can now see the data that was replicated from SAP S/4HANA CDS View containing Sales order information on the bottom of your screen.
 
 **This concludes the Exercise 1 where the objective is to replicate data from SAP S/4HANA source into SAP Datasphere.**
 
