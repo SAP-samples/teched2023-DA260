@@ -159,12 +159,10 @@ The execution will load the newly arrived sales order into the target table
    ![Ex03_25](images/Ex03_25.png)
    
 1. In Graphical view editor, select output node and do the data preview.
-1. Perform filtering on data preview with ProductId: RC-1053, Compare Historic and Current sticker price
+1. Perform filtering on data preview with ProductGuid: 42010AA400041EED8CF393ABD2B296BA, to do the comparison between Historic and Current sticker price and see the calculated rebate price.
    
    ![Ex03_26](images/Ex03_26.png)
-1. Another price comparison example.
-   
-   ![Ex03_PriceCompare](images/Ex03_PriceCompare.png)
+  
 
 
 Pleae click here to continue with [Exercise 4 - Replicate data from SAP S/4HANA to SAP HANA Data Lake Files using Replication Flows](../ex4/)
