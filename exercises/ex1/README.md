@@ -1,6 +1,6 @@
 # Exercise 1 - Replicate CDS Views from SAP S/4HANA via Replication Flows to SAP Datasphere
 
-This exercise involves creating a Replication Flow that reads data from a SAP S/4 HANA CDS Views and replicates this data into SAP Datasphere local tables with delta capture as target. This process involves modelling of a replication flow and configuring it to consume pre-existing S4 HANA connection and pick the required source objects to copy them into new target tables in SAP Datasphere.
+This exercise involves creating a Replication Flow that reads data from a SAP S/4 HANA CDS Views and replicates this data into SAP Datasphere local tables with delta capture as target. This process involves modelling of a replication flow and configuring it to consume a pre-existing S4 HANA connection and pick the required source objects to copy them into new target tables in SAP Datasphere.
 
 In this exercise we will make use of connections that are pre-delivered in your SAP Datasphere instance, e.g. the SAP S/4HANA on Premise source system. You can check the the S/4HANA connection in the “Connections” application inside your SAP Datasphere space.
 
@@ -43,7 +43,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_01_07](images/ex_01_07.png)
 
-8.	Now click on *Add Source Objects* button that launches *Select Source Objects* popup as shown below. Scroll down in the tree hierarchy on the left and select *TMP – Local Objects*. In a next step, please enter “Z_CDS” in search bar and click enter to filter for the required CDS Views that are required for this exercise. Now, please select the following CDS Views as shown below:
+8.	Now click on *Add Source Objects* button that launches *Select Source Objects* popup as shown below. Scroll down in the tree hierarchy on the left and select *TMP – Local Objects*. In a next step, please enter “Z_CDS” in search bar and click enter to filter for the CDS Views that are required for this exercise. Now, please select the following CDS Views as shown below:
    <br>
    - Z_CDS_EPM_BUPA <br>
    - Z_CDS_EPM_PD  <br>
@@ -58,7 +58,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_01_09](images/ex_01_09.png)
 
-10.	Click on *Add Selection* that shows that starts the fetching of source objects details from the source
+10.	Click on *Add Selection* that starts the fetching of source objects details from the source
 
     ![ex_01_10](images/ex_01_10.png)
 
@@ -66,7 +66,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_01_11](images/ex_01_11.png)
 
-12.	You have the possibility to create projections for each CDS View (e.g. creating a filter), but in this exercise no projections are required and hence you can skip the creation of a projection. 
+12.	You have the possibility to create projections for each CDS View (e.g. creating a filter), but in this exercise no projections are required and hence you can skip the creation of projections. 
 
       As a next step, click on the icon adjacent to *Select Target Connection*. 
 
@@ -88,11 +88,11 @@ In the highlighted section it shows the new target local tables that will be cre
 
     Note: As an alternative, you can click on the *Settings* tab in the middle of the screen to change the load type to *Initial and Delta*.
 
-15.	For each target object, select the menu icon and select *Rename Target Object*:
+15.	For each target object, select the three dot menu icon and select *Rename Target Object*:
 
       ![Rename_Replication_Flow](images/Rename_Replication_Flow.jpg)     
 
-      Please rename Z_CDS_EPM_PO to Products, Z_CDS_EPM_SO to SalesOrders, Z_CDS_EPM_SO_I to SalesOrderItems and Z_CDS_EPM_BUPA to BusinessPartners. In this scenario we will let the replication flow create the target local tables instead of using pre-created tables.
+      Please rename Z_CDS_EPM_PD to Products, Z_CDS_EPM_SO to SalesOrders, Z_CDS_EPM_SO_I to SalesOrderItems and Z_CDS_EPM_BUPA to BusinessPartners. In this scenario we will let the replication flow create the target local tables instead of using pre-created tables.
    	
     ![ex_01_15](images/ex_01_15.png)
 
@@ -102,7 +102,7 @@ In the highlighted section it shows the new target local tables that will be cre
 
    ![ex_01_16_0](images/ex_01_16_0.png)
 
-   Change the default name being displayed by defining the business name as *Inbound Repflow* which will automatically set technical name as *Inbound_RepFlow*. At the moment, replication flows will always have the same name for business as well as technical name, which cannot be changed.
+   Change the default name being displayed by defining the business name as *Inbound RepFlow* which will automatically set technical name as *Inbound_RepFlow*. At the moment, replication flows will always have the same name for business as well as technical name, which cannot be changed.
     
    ![ex_01_16](images/ex_01_16.png)
 
@@ -134,14 +134,14 @@ Once the Initial is done the status of each replication object will switch to st
 
       ![ex_01_21](images/ex_01_21.png)
       
-      In case of any error message, please check *Message* tab to access details of the error message.
+      In case of any error message, please check the *Message* tab to access details of the error message.
 
 
 22.	Finally, you can check the replicated data from SAP S/4HANA CDS views in the Datasphere local tables. Therefore, go to the main page of the Data Builder and check for the tables you have defined in the Replication Flow before:
     
       ![ex_01_22_0](images/ex_01_22_0.png)
 
-    Then select one of the local tables in SAP datasphere, e.g. SalesOrder, by double clicking on the table.
+    Then select one of the local tables in SAP Datasphere, e.g. SalesOrder, by double clicking on the table.
 
     Click on the preview button as highlighted below:
 
