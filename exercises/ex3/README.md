@@ -71,7 +71,7 @@ Create a view to compare historic price with current price and calculate the reb
     
    ![Ex03_10](images/Ex03_10.png)
    
-20. Filter the preview with ProductID: RC-1053. In the preview (Newly updated) Current sticker price and Historic sticker price comparison can be seen below.
+20. Filter the preview with ProductGuid: "42010AA400041EED8CF393ABD2B296BA". In the preview (Newly updated) Current sticker price and Historic sticker price comparison can be seen below.
     
    ![Ex03_11](images/Ex03_11.png)
 
@@ -93,26 +93,26 @@ Simulate the change of a sticker price on a product and the new arrival of an a 
    
    ![Ex03_14](images/Ex03_14.png)
    
-5. Apply filter of ProductID : RC-1053
+5. Apply filter of ProductGuid/NodeKey: "42010AA400041EED8CF393ABD2B296BA"
    
    ![Ex03_15](images/Ex03_15.png)
    
-6. For Product RC-1053, Reduce the price from the original price. For example: If Old Price was 4000, Next time update it to less than 4000.
+6. For ProductGuid/NodeKey: "42010AA400041EED8CF393ABD2B296BA", Reduce the price from the original price. For example: If Old Price was 1200, Next time update it to less than 1100.
    
   ![Ex03_16](images/Ex03_16.png)
   
 7. Save the table, Post save “Change Type” column value will be changing to “U”.
 8. Go back to Data Builder landing page, Open “SalesOrders” table.
 9. Open this table also in Data Editor.
-10. Sort the table in descending order based on “SalesOrderId”.
+10. Apply filter of ProductGuid/NodeKey: "42010AA400041EED8CF393ABD2B296BA"
     
    ![Ex03_17](images/Ex03_17.png)
    
-11. After descending order sort, select the first row and create a duplicate record.
+11. After filtering, select the first row and create a duplicate record.
     
    ![Ex03_18](images/Ex03_18.png)
    
-12. Edit the duplicated record with new SalesOrderId and new columns “Gross Amount”, “NetAmount”, “TaxAmount” values. For example: Put the Gross amount < newly set Price at step 6, Net Amount = Gross Amount - 100, Tax Amount = 100
+12. Edit the duplicated record with new SalesOrderId and new columns “Gross Amount”, “NetAmount”, “TaxAmount” values. For example: Put the Gross amount(1100) < newly set Price at step 6, Net Amount = Gross Amount - 100, Tax Amount = 100
 13. Save the table. “Change Type” column value will change to “I”.
 14. Go back to Data builder landing page, Open Table “SalesOrderItems” with “Data Editor”.
 15. Sort the table with “SalesOrderId” in descending order. Select the first record and create duplicate entry of it.
