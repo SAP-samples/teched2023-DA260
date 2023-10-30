@@ -45,7 +45,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_02_09](images/ex_02_09.png)
 
-10.	The projection node is inserted and its property panel shows all the columns available for selection or removal. Select all columns except Nodekey, productid and price columns and click on "x" button above to remove them from projection. It means only price and productid columns are selected in projection. Select Price column and click on menu icon adjacent to it to see “Change Name” option.
+10.	The projection node is inserted and its property panel shows all the columns available for selection or removal. Select all columns except Nodekey, productid and price columns and click on "x" button above to remove them from projection. It means only Nodekey, price and productid columns are selected in projection. Select Price column and click on menu icon adjacent to it to see “Change Name” option. Similarly select Nodekey column and rename it to Pr_Nodekey to avoid collision with nodekey of SalesOrderItems after join.
 
     ![ex_02_10](images/ex_02_10.png)
 
