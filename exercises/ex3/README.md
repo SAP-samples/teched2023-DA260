@@ -26,19 +26,15 @@ Create a view to compare historic price with current price and calculate the reb
    
    ![Ex03_Price_Change](images/Ex03_Price_Change.png)
   
-5.In the projection node, Select all columns except "Current Sticker Price", "PRODUCTID", "NodeKey" columns and click on "x" button above to remove them from projection. It means only "Current Sticker Price", "PRODUCTID", "NodeKey" columns are selected in projection. Select Nodekey column and click on menu icon adjacent to it to see “Change Name” option. Rename it to Pr_Nodekey to avoid collision with nodekey of SalesOrderItems after join.
-1. ![Ex03_03](images/Ex03_CNodeKey.png) 
-1. ![Ex03_03](images/Ex03_CNameNode.png)
-
-
-6. Expose below mentioned only 3 columns in the projection node. Current Sticker Price, PRODUCTID, NodeKey.
-![Ex03_03](images/Ex03_03.png) 
-
-7. Perform inner join on projection node and delta local table and map the “Pr_Nodekey” column from Products table (which is coming from above mentioned projection) to ProductGuid of TechED_SalesOrderitem table
-8. ![Ex03_03](images/Ex03_Project30.png)
-9. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
-   
-   ![Ex03_Rebate](images/Ex03_Rebate.png)
+5. In the projection node, Select all columns except "Current Sticker Price", "PRODUCTID", "NodeKey" columns and click on "x" button above to remove them from projection. It means only "Current Sticker Price", "PRODUCTID", "NodeKey" columns are selected in projection. Select Nodekey column and click on menu icon adjacent to it to see “Change Name” option. Rename it to Pr_Nodekey to avoid collision with nodekey of SalesOrderItems after join.
+6. ![Ex03_03](images/Ex03_CNodeKey.png)
+7. ![Ex03_03](images/Ex03_CNameNode.png)
+8. Expose below mentioned only 3 columns in the projection node. Current Sticker Price, PRODUCTID, NodeKey.
+9. ![Ex03_03](images/Ex03_03.png)
+10. Perform inner join on projection node and delta local table and map the “Pr_Nodekey” column from Products table (which is coming from above mentioned projection) to ProductGuid of TechED_SalesOrderitem table
+11. ![Ex03_03](images/Ex03_Project30.png)
+12. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
+13. ![Ex03_Rebate](images/Ex03_Rebate.png)
    
 10. In Final projection node, Exclude columns "Pr_Nodekey" and PRODUCTID (Which is coming from Product table).
 11. ![Ex03_Rebate](images/Ex03_ExProductId.png) 
