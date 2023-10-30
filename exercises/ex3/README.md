@@ -26,21 +26,22 @@ Create a view to compare historic price with current price and calculate the reb
    
    ![Ex03_Price_Change](images/Ex03_Price_Change.png)
   
-5. Expose below mentioned only 2 columns in the projection node. Current Sticker Price and PRODUCTID
+5. Expose below mentioned only 3 columns in the projection node. Current Sticker Price, PRODUCTID, NodeKey.
   
     ![Ex03_03](images/Ex03_03.png)
 
-6. Perform inner join on projection node and delta local table and map the “PRODUCTID” column.
-7. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
+6. Perform inner join on projection node and delta local table and map the “NodeKey” column from Products table to ProductGuid of TechED_SalesOrderitem table
+7. ![Ex03_03](images/Ex03_Project30.png)
+8. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
    
    ![Ex03_Rebate](images/Ex03_Rebate.png)
    
-8. Go to the output node, Open properties panel. 
-9. Go to attributes section, By this option change column to measure.
+9. Go to the output node, Open properties panel. 
+10. Go to attributes section, By this option change column to measure.
 
    ![Ex03_04](images/Ex03_04.png)
    
-10. Add below mentioned columns in the measures.
+11. Add below mentioned columns in the measures.
    
    ![Ex03_05](images/Ex03_05.png)
    
@@ -115,9 +116,10 @@ Simulate the change of a sticker price on a product and the new arrival of an a 
 12. Edit the duplicated record with new SalesOrderId and new columns “Gross Amount”, “NetAmount”, “TaxAmount” values. For example: Put the Gross amount(1100) < newly set Price at step 6, Net Amount = Gross Amount - 100, Tax Amount = 100
 13. Save the table. “Change Type” column value will change to “I”.
 14. Go back to Data builder landing page, Open Table “SalesOrderItems” with “Data Editor”.
-15. Sort the table with “SalesOrderId” in descending order. Select the first record and create duplicate entry of it.
-16. In the duplicated row, Change the “SalesOrderId” column value to above mentioned newly added “SalesOrderId” in the SalesOrder table.
-17. Provide same productid: RC-1053 and Changed the column value of “Gross Amount”, “NetAmount” and “TaxAmount” columns.
+15. Filter SalesOrderItems table with ProductGuid: 42010AA400041EED8CF393ABD2B296BA.
+16. Select first row, add duplicate of the selected row.
+17. In the duplicated row, Change the “itemGuid” column value to above mentioned newly added “itemGuid” in the SalesOrder table.
+18. Provide same ProductGuid: 42010AA400041EED8CF393ABD2B296BA and Changed the column value of “Gross Amount”, “NetAmount” and “TaxAmount” columns.
     
    ![Ex03_19](images/Ex03_19.png)
    
