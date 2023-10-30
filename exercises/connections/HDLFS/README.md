@@ -34,7 +34,7 @@
      
      ![HDL06](images/HDL06.png)
 
-   8. After validating the connection successfully, the following message will appear on the bototm of your screen:
+   8. After validating the connection successfully, the following message will appear on the bottom of your screen:
 
       ![HDL07](images/HDL07.png)
       
