@@ -97,6 +97,8 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_02_22](images/ex_02_22.png)
 
+23. Go to Data Builder and open Inbound Replication Flow and click on Tool icon as shown in Step-19 of Ex-2. It will take you to Replication Flow Monitoring screen. Click on Stop to stop the replication flow as the data replication got completed now and we won't be loading any further data. The will enable freeing up S4Hana connections that are of not in use.
+
 This is the end of Exercise-2 where we successfully created a transformation flow that persists historic sticker price into a target table which would be consumed in next exercise.
 
 Please click here to continue with [Exercise 3 - Preparing Analytical Dataset with historic and delta records](../ex3/)
