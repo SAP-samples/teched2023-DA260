@@ -27,55 +27,55 @@ Create a view to compare historic price with current price and calculate the reb
    ![Ex03_Price_Change](images/Ex03_Price_Change.png)
   
 5. In the projection node, Select all columns except "Current Sticker Price", "PRODUCTID", "NodeKey" columns and click on "x" button above to remove them from projection. It means only "Current Sticker Price", "PRODUCTID", "NodeKey" columns are selected in projection. Select Nodekey column and click on menu icon adjacent to it to see “Change Name” option. Rename it to Pr_Nodekey to avoid collision with nodekey of SalesOrderItems after join.
-6. ![Ex03_03](images/Ex03_CNodeKey.png)
-7. ![Ex03_03](images/Ex03_CNameNode.png)
-8. Expose below mentioned only 3 columns in the projection node. Current Sticker Price, PRODUCTID, NodeKey.
-9. ![Ex03_03](images/Ex03_03.png)
-10. Perform inner join on projection node and delta local table and map the “Pr_Nodekey” column from Products table (which is coming from above mentioned projection) to ProductGuid of TechED_SalesOrderitem table
-11. ![Ex03_03](images/Ex03_Project30.png)
-12. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
-13. ![Ex03_Rebate](images/Ex03_Rebate.png)
+   ![Ex03_03](images/Ex03_CNodeKey.png)
+   ![Ex03_03](images/Ex03_CNameNode.png)
+6. Expose below mentioned only 3 columns in the projection node. Current Sticker Price, PRODUCTID, NodeKey.
+   ![Ex03_03](images/Ex03_03.png)
+7. Perform inner join on projection node and delta local table and map the “Pr_Nodekey” column from Products table (which is coming from above mentioned projection) to ProductGuid of TechED_SalesOrderitem table
+   ![Ex03_03](images/Ex03_Project30.png)
+8. Add calculation node with calculated column “InvoiceRebateperItem” with this expression “Historic_Sticker_Price - GROSSAMOUNT” and validate the expression.
+   ![Ex03_Rebate](images/Ex03_Rebate.png)
    
-10. In Final projection node, Exclude columns "Pr_Nodekey" and PRODUCTID (Which is coming from Product table).
-11. ![Ex03_Rebate](images/Ex03_ExProductId.png) 
-12. ![Ex03_Rebate](images/Ex03_ExNodeK.png)  
-13. Go to the output node, Open properties panel. 
-14. Go to attributes section, By this option change column to measure.
+9. In Final projection node, Exclude columns "Pr_Nodekey" and PRODUCTID (Which is coming from Product table).
+   ![Ex03_Rebate](images/Ex03_ExProductId.png) 
+   ![Ex03_Rebate](images/Ex03_ExNodeK.png)  
+10. Go to the output node, Open properties panel. 
+11. Go to attributes section, By this option change column to measure.
 
    ![Ex03_04](images/Ex03_04.png)
    
-11. Add below mentioned columns in the measures.
+12. Add below mentioned columns in the measures.
    
    ![Ex03_05](images/Ex03_05.png)
    
-11. Open Attributes dialog, by clicking on edit icon.
+13. Open Attributes dialog, by clicking on edit icon.
 
     ![Ex03_06](images/Ex03_06.png)
     
-12. Set the semantic type (Currency code) for below mentioned columns.
+14. Set the semantic type (Currency code) for below mentioned columns.
     
    ![Ex03_07](images/Ex03_07.png)
    
-13. Edit all the measures by updating "Semantic Type" with below info.
+15. Edit all the measures by updating "Semantic Type" with below info.
     
     ![Ex03_Measure_Update](images/Ex03_Measure_Update.png)
     
-14. Deploy the view.
-15. Go to the Products table, as mentioned in the exercise 3.2. Update the Products table "Price" column for any product you choose, ex: product with ProductGuid: "42010AA400041EED8CF393ABD2B296BA" with new Price value.
-16. Navigate back to the above mentioned deployed view.
-17. In Data preview, Perform data preview by clicking on context menu preview icon.
+16. Deploy the view.
+17. Go to the Products table, as mentioned in the exercise 3.2. Update the Products table "Price" column for any product you choose, ex: product with ProductGuid: "42010AA400041EED8CF393ABD2B296BA" with new Price value.
+18. Navigate back to the above mentioned deployed view.
+19. In Data preview, Perform data preview by clicking on context menu preview icon.
     
    ![Ex03_08](images/Ex03_08.png)
    
-18. Launch preview settings, by this icon.
+20. Launch preview settings, by this icon.
     
    ![Ex03_09](images/Ex03_09.png)
    
-19. Apply filter on preview.
+21. Apply filter on preview.
     
    ![Ex03_10](images/Ex03_10.png)
    
-20. Filter the preview with ProductGuid: "42010AA400041EED8CF393ABD2B296BA". In the preview (Newly updated) Current sticker price and Historic sticker price comparison can be seen below.
+22. Filter the preview with ProductGuid: "42010AA400041EED8CF393ABD2B296BA". In the preview (Newly updated) Current sticker price and Historic sticker price comparison can be seen below.
     
    ![Ex03_11](images/Ex03_11.png)
 
