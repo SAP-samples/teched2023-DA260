@@ -126,7 +126,7 @@ Simulate the change of a sticker price on a product and the new arrival of a sal
     
    ![Ex03_19](images/Ex03_19.png)
    
-18. Save the table. “Change Type” column value will change to “I”.
+19. Save the table. “Change Type” column value will change to “I”.
 
 ##	Exercise 3.3 – Execute Transformation flow to pull the delta records from source.
 The execution will load the newly arrived sales order into the target table
