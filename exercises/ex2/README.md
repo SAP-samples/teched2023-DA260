@@ -29,7 +29,7 @@ Refer to the provided solution below for a detailed, step-by-step guide to compl
 
     ![ex_02_06](images/ex_02_06_01.png)
 
-  	You need to map ProductGuid of SalesOrderItems table with NodeKey of Products table.
+  	You need to map ProductGuid of SalesOrderItems table with NodeKey of Products table. Remove the default mapping as shown below and link ProductGuid in left side table to Nodekey in right side table.
   	
   	![ex_02_06](images/ex_02_06_01.png)
 
