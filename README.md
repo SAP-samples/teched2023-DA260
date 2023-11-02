@@ -25,7 +25,7 @@ Question to answer: Was there a rebate in the net sales compared to the list pri
 * [Access to a SAP Datasphere tenant](https://academy.ap11.hcs.cloud.sap/dwaas-ui/index.html)
 * * Tenant access password: ObqJ7HK7gh1!
 * https://academy.eu10.hcs.cloud.sap/dwaas-ui/index.html
-* User-Id: AC63058U, Last 2 digits of previous Id
+* User-Id: AC60851U, Last 2 digits of previous Id
 * Tenant access password: Obg0qEp40m1!
 * Basic knowhow about the usage and integration of data from SAP S/4HANA
 * General understanding of Enterprise Data Management and ETL (Extraction, Transformation, Load)
