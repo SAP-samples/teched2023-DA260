@@ -36,12 +36,12 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
 7. Select objects from left side folder browser, in *TMP Local Objects* folder.
     
 8. Search Objects inside *TMP Local Objects* folder, with "Z_CDS" prefix. And select "Z_CDS_EPM_SALESORDER" CDS View:
-   
-   ![ex_04_08](images/ex_04_08.png)
+
+   ![Ex04_07](images/Ex04_07.png)
    
 9. Click *Next* and then click *Add selection*. Wait until the CDS views are imported successfully.
     
-   ![Ex04_08](images/Ex04_08.png)
+   ![ex_04_08](images/ex_04_08.png)
    
 10. After the import is successful, add a target connection:
     
