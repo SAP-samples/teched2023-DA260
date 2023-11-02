@@ -62,12 +62,10 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
    ![Ex04_11](images/Ex04_11.png)
     
 13. All the target tables should be listed like this:
-    
-   ![Ex04_12](images/Ex04_12.png)
    
 14. Select each target table and change *load type* to “Initial and Delta”:
     
-   ![Ex04_13](images/Ex04_13.png)
+   ![Ex04_13](images/Ex04_13.png) 
    
 15. Deploy the replication flow.
     
