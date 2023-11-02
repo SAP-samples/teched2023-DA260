@@ -35,7 +35,7 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
    
 7. Select objects from left side folder browser, in *TMP Local Objects* folder.
     
-8. Search Objects inside *TMP Local Objects* folder, with "Z_CDS" prefix. And select all available CDS Views:
+8. Search Objects inside *TMP Local Objects* folder, with "Z_CDS" prefix. And select "Z_CDS_EPM_SALESORDER" CDS View:
    
    ![Ex04_07](images/Ex04_07.png)
    
