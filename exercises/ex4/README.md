@@ -39,11 +39,11 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
    
    ![Ex04_07](images/Ex04_07.png)  
    
-9. Click *Next* and then click *Add selection*. Wait until the CDS views are imported successfully.
+10. Click *Next* and then click *Add selection*. Wait until the CDS views are imported successfully.
     
    ![Ex04_08](images/Ex04_08.png)
    
-10. After the import is successful, add a target connection:
+11. After the import is successful, add a target connection:
     
    ![Ex04_09](images/Ex04_09.png)
 
