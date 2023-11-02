@@ -22,7 +22,7 @@ Question to answer: Was there a rebate in the net sales compared to the list pri
 
 * Google Chrome
 * Access to this GitHub repository
-* Access to a Guided Experience system of SAP Data Warehouse Cloud tenant (if you don't have one yet, please follow the instructions of exercise 0)
+* [Access to a SAP Datasphere tenant](https://academy.ap11.hcs.cloud.sap/dwaas-ui/index.html)
 * Basic knowhow about the usage and integration of data from SAP S/4HANA
 * General understanding of Enterprise Data Management and ETL (Extraction, Transformation, Load)
 
