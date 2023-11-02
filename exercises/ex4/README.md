@@ -81,7 +81,7 @@ Additionally, you need to stop the Replication Flow created in [exercise 1](../e
    
 19. In HDLFS connection, search for the folder, which was set as target container in the replication flow including your user ID. And there we can see all the tables are successfully replicated in SAP HANA Cloud, Data Lake Files:
     
-   ![ex_04_19_1](images/ex04_04_19_1.png)
+   ![ex_04_19_1](images/ex_04_19_1.png)
 
 
 20. Once you have successfully loaded your CDS view data to HDLFS, please go to the Data Integration Monitor to *Stop* your replication flow similar like it was explained in the beginning of this exercise. To stop your replication flow, please open the detailed flow monitor of your running replication flow and click the *Stop* button in the top menu bar:
