@@ -22,6 +22,8 @@
    - **Root Path**: Please keep  it empty
    - **Keystore File**: Use the upload function to upload the keystore file you have previously downloaded and unpacked.
    - **Keystore Password**: Will be provided on-site by your SAP trainers.
+   - HDL_Files Keystore Password: YKNnecFv5KT3vuuiRjfU![Uploading image.png…]()
+
      
    ![HDL05](images/HDL05.png)
 
