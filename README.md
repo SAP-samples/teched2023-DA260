@@ -22,11 +22,11 @@ Question to answer: Was there a rebate in the net sales compared to the list pri
 
 * Google Chrome
 * Access to this GitHub repository
-* [Access to a SAP Datasphere tenant](https://academy.ap11.hcs.cloud.sap/dwaas-ui/index.html)
+* [Session-1] [Access to a SAP Datasphere tenant](https://academy.ap11.hcs.cloud.sap/dwaas-ui/index.html)
 * * Tenant access password: ObqJ7HK7gh1!
-* https://academy.eu10.hcs.cloud.sap/dwaas-ui/index.html
-* User-Id: AC60851U + Last 2 digits as given to you
-* Tenant access password: Obg0qEp40m1!
+* [Session-2] https://academy.eu10.hcs.cloud.sap/dwaas-ui/index.html
+* * User-Id: AC60851U + Last 2 digits as given to you
+* * Tenant access password: Obg0qEp40m1!
 * Basic knowhow about the usage and integration of data from SAP S/4HANA
 * General understanding of Enterprise Data Management and ETL (Extraction, Transformation, Load)
 
