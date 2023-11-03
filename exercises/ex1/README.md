@@ -149,7 +149,13 @@ Once the Initial is done the status of each replication object will switch to st
 
     You can now see the data that was replicated from SAP S/4HANA CDS View containing Sales order information on the bottom of your screen.
 
+    
+
 **This concludes the Exercise 1 where the objective is to replicate data from SAP S/4HANA source into SAP Datasphere.**
+
+Note: If Replication flow fails, Please follow these steps to create local tables with import csn or import csv which are placed in the ex1 folder.
+1. Import csn to import the meta data of table.
+2. upload the given csv to load the data in the table
 
 Pleae click here to continue with [Exercise 2 - Transforming data using Transformation Flows in SAP Datasphere](../ex2/)
 
