@@ -10,7 +10,7 @@ SAP Datasphere, the evolution of SAP Data Warehouse Cloud and SAP Data Intellige
 
 ## Overview
 
-MyCompany sales bikes to customers. In the source the list price is stored in the product master data. The sales order items only contain the net sales and quantity. The list price, that was valid at the time of sales, is not stored. The goal of the exercise is, to create a data model that stores the historic list price. For that a two stage data model is used. The data will come in by a Replication Flow and be taged by a Transformation Flow. 
+MyCompany sales bikes to customers. In the source the list price is stored in the product master data. The sales order items only contain the net sales and quantity. The list price, that was valid at the time of sales, is not stored. The goal of the exercise is, to create a data model that stores the historic list price. For that a two stage data model is used. The data will come in by a Replication Flow and be staged by a Transformation Flow. 
 
 Question to answer: Was there a rebate in the net sales compared to the list price of the product master data?
 
