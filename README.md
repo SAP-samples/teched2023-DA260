@@ -22,15 +22,17 @@ Question to answer: Was there a rebate in the net sales compared to the list pri
 
 * Google Chrome
 * Access to this GitHub repository
+
+  **Important Note**: The Datasphere landscape being used during SAP TechEd will be available until **November 19th**. Until November 19th you can re-use your existing content in your user space and finalize the exercises in case you did not have sufficient time during the hands-on workshop at SAP TechEd. 
   
 * [Session-1 on November 2nd] [Access to SAP Datasphere tenant](https://academy.eu10.hcs.cloud.sap/dwaas-ui/index.html#/home)
-* * User-Id: AC60851U + last 2 digits that have been provided to you onsite at TechEd
-* * Tenant access password: Obg0qEp40m1!
+  * User-Id: AC60851U + last 2 digits that have been provided to you onsite at TechEd
+  * Tenant access password: Obg0qEp40m1!
 
 * [Session-2 on November 3rd] [Access to SAP Datasphere tenant](https://academy.eu10.hcs.cloud.sap/dwaas-ui/index.html#/home)
-* * User-Id: AC60851U + last 2 digits that have been provided to you onsite at TechEd
-* * Tenant access password: Obg0qEp40m1!
-    
+  * User-Id: AC60851U + last 2 digits that have been provided to you onsite at TechEd
+  * Tenant access password: Obg0qEp40m1!
+
 * Basic knowhow about the usage and integration of data from SAP S/4HANA
 * General understanding of Enterprise Data Management and ETL (Extraction, Transformation, Load)
 
